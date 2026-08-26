@@ -334,10 +334,10 @@ document.addEventListener("DOMContentLoaded", () => {
       serverParcels.forEach(parcel => {
         const isGovt = parcel.category.toLowerCase().includes("govt") || parcel.category.toLowerCase().includes("government");
         const poly = L.polygon(parcel.coords, {
-          color: isGovt ? "#f43f5e" : "#e5a93c",
+          color: isGovt ? "#ef4444" : "#2563eb",
           weight: 1.5,
-          fillColor: isGovt ? "#f43f5e" : "#e5a93c",
-          fillOpacity: 0.1,
+          fillColor: isGovt ? "#ef4444" : "#2563eb",
+          fillOpacity: 0.12,
           dashArray: "3, 4"
         });
 
@@ -361,10 +361,10 @@ document.addEventListener("DOMContentLoaded", () => {
           parcels.forEach(parcel => {
             const isGovt = parcel.category.toLowerCase().includes("govt") || parcel.category.toLowerCase().includes("government");
             const poly = L.polygon(parcel.coords, {
-              color: isGovt ? "#f43f5e" : "#e5a93c",
+              color: isGovt ? "#ef4444" : "#2563eb",
               weight: 1.5,
-              fillColor: isGovt ? "#f43f5e" : "#e5a93c",
-              fillOpacity: 0.1,
+              fillColor: isGovt ? "#ef4444" : "#2563eb",
+              fillOpacity: 0.12,
               dashArray: "3, 4"
             });
 
@@ -1135,9 +1135,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     activeParcelLayer = L.polygon(parcel.coords, {
-      color: "#e5a93c",
+      color: "#2563eb",
       weight: 3,
-      fillColor: "#e5a93c",
+      fillColor: "#2563eb",
       fillOpacity: 0.25,
       className: "glowing-parcel"
     }).addTo(map);
@@ -1343,7 +1343,7 @@ document.addEventListener("DOMContentLoaded", () => {
     centerTxt.setAttribute("x", "100");
     centerTxt.setAttribute("y", "105");
     centerTxt.setAttribute("class", "fmb-text-lbl");
-    centerTxt.setAttribute("style", "font-size: 14px; fill: rgba(229, 169, 60, 0.4);");
+    centerTxt.setAttribute("style", "font-size: 14px; fill: rgba(37, 99, 235, 0.4);");
     centerTxt.textContent = `${parcel.survey}/${parcel.subdiv || ''}`;
     svg.appendChild(centerTxt);
   }
@@ -1448,7 +1448,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Place a circle marker
     const marker = L.circleMarker(latlng, {
       radius: 5,
-      color: "#e5a93c",
+      color: "#2563eb",
       fillColor: "#fff",
       fillOpacity: 1,
       weight: 2
@@ -1461,7 +1461,7 @@ document.addEventListener("DOMContentLoaded", () => {
       measurePolyline.addLatLng(latlng);
     } else {
       measurePolyline = L.polyline(measurePoints, {
-        color: "#e5a93c",
+        color: "#2563eb",
         weight: 3,
         dashArray: "5, 5"
       }).addTo(map);
@@ -1591,8 +1591,8 @@ document.addEventListener("DOMContentLoaded", () => {
           // Highlight coordinates with a temporary circle
           const tempCircle = L.circle([data.lat, data.lng], {
             radius: 20,
-            color: '#e5a93c',
-            fillColor: '#e5a93c',
+            color: '#2563eb',
+            fillColor: '#2563eb',
             fillOpacity: 0.4
           }).addTo(map);
           fadeOutLayer(tempCircle, 2000);
@@ -1743,7 +1743,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const label = String.fromCharCode(65 + index); // A, B, C, D...
       const m = L.circleMarker(coord, {
         radius: 6,
-        color: '#e5a93c',
+        color: '#2563eb',
         fillColor: '#fff',
         fillOpacity: 1,
         weight: 2
@@ -1765,12 +1765,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const interval = setInterval(() => {
       activeParcelLayer.setStyle({
         weight: flashCount % 2 === 0 ? 6 : 3,
-        color: flashCount % 2 === 0 ? '#ef4444' : '#e5a93c'
+        color: flashCount % 2 === 0 ? '#ef4444' : '#2563eb'
       });
       flashCount++;
       if (flashCount > 5) {
         clearInterval(interval);
-        activeParcelLayer.setStyle({ weight: 3, color: '#e5a93c' });
+        activeParcelLayer.setStyle({ weight: 3, color: '#2563eb' });
       }
     }, 300);
   };
