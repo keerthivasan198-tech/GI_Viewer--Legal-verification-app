@@ -1,0 +1,274 @@
+[
+  {
+    "district": "Chennai",
+    "taluk": "Egmore",
+    "village": "Egmore Village",
+    "survey": "101",
+    "subdiv": "1A",
+    "owner": "R. Kuppusamy",
+    "patta": "2304",
+    "category": "Private (Ryotwari)",
+    "type": "Ryotwari Nanjai (Wet Land)",
+    "area": "0 Hectares, 12.4 Ares (0.31 Acres)",
+    "tax": "₹ 1.80",
+    "soil": "Sandy Loam / Class II",
+    "coords": [
+      [13.0335, 80.2685],
+      [13.0338, 80.2692],
+      [13.0332, 80.2695],
+      [13.0329, 80.2688]
+    ],
+    "adjacent": { "N": "Survey 100", "S": "Survey 101/1B", "E": "Survey 102", "W": "Panchayat Street (6m)" },
+    "svgPath": "M 20,40 L 180,20 L 190,160 L 40,180 Z",
+    "svgDims": [
+      { "x": 100, "y": 25, "val": "38.5 m" },
+      { "x": 190, "y": 90, "val": "54.2 m" },
+      { "x": 115, "y": 175, "val": "41.0 m" },
+      { "x": 25, "y": 110, "val": "51.8 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 40, "lbl": "A" },
+      { "x": 180, "y": 20, "lbl": "B" },
+      { "x": 190, "y": 160, "lbl": "C" },
+      { "x": 40, "y": 180, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Chennai",
+    "taluk": "Egmore",
+    "village": "Egmore Village",
+    "survey": "101",
+    "subdiv": "1B",
+    "owner": "S. Meenakshi Sundaram",
+    "patta": "2305",
+    "category": "Private (Ryotwari)",
+    "type": "Ryotwari Punjai (Dry Land)",
+    "area": "0 Hectares, 8.2 Ares (0.20 Acres)",
+    "tax": "₹ 1.10",
+    "soil": "Sandy / Class III",
+    "coords": [
+      [13.0329, 80.2688],
+      [13.0332, 80.2695],
+      [13.0327, 80.2698],
+      [13.0324, 80.2691]
+    ],
+    "adjacent": { "N": "Survey 101/1A", "S": "Survey 105", "E": "Survey 102", "W": "Panchayat Street (6m)" },
+    "svgPath": "M 40,30 L 190,10 L 170,160 L 20,150 Z",
+    "svgDims": [
+      { "x": 115, "y": 15, "val": "29.4 m" },
+      { "x": 185, "y": 85, "val": "44.6 m" },
+      { "x": 95, "y": 160, "val": "31.1 m" },
+      { "x": 25, "y": 90, "val": "42.3 m" }
+    ],
+    "vertices": [
+      { "x": 40, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 10, "lbl": "B" },
+      { "x": 170, "y": 160, "lbl": "C" },
+      { "x": 20, "y": 150, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Chennai",
+    "taluk": "Egmore",
+    "village": "Egmore Village",
+    "survey": "102",
+    "subdiv": "2",
+    "owner": "Tamil Nadu Housing Board (TNHB)",
+    "patta": "G-102",
+    "category": "Government Poramboke",
+    "type": "Tharisu (Waste Land / Public)",
+    "area": "0 Hectares, 34.0 Ares (0.84 Acres)",
+    "tax": "Exempted",
+    "soil": "Graveled / Class V",
+    "coords": [
+      [13.0338, 80.2692],
+      [13.0344, 80.2705],
+      [13.0335, 80.2709],
+      [13.0332, 80.2695]
+    ],
+    "adjacent": { "N": "Survey 99", "S": "Survey 103", "E": "Survey 107", "W": "Survey 101" },
+    "svgPath": "M 30,50 L 190,20 L 180,180 L 15,150 Z",
+    "svgDims": [
+      { "x": 110, "y": 30, "val": "72.4 m" },
+      { "x": 190, "y": 100, "val": "48.2 m" },
+      { "x": 97, "y": 170, "val": "71.0 m" },
+      { "x": 18, "y": 100, "val": "45.6 m" }
+    ],
+    "vertices": [
+      { "x": 30, "y": 50, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 180, "lbl": "C" },
+      { "x": 15, "y": 150, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Chennai",
+    "taluk": "Mylapore",
+    "village": "Mylapore Village",
+    "survey": "104",
+    "subdiv": "2B",
+    "owner": "K. Ramachandran",
+    "patta": "1042",
+    "category": "Private (Ryotwari)",
+    "type": "Ryotwari Nanjai (Wet Land)",
+    "area": "0 Hectares, 25.5 Ares (0.63 Acres)",
+    "tax": "₹ 3.50",
+    "soil": "Clayey / Class I (Vandol)",
+    "coords": [
+      [13.0330, 80.2690],
+      [13.0336, 80.2698],
+      [13.0331, 80.2704],
+      [13.0325, 80.2696]
+    ],
+    "adjacent": { "N": "Survey 104/1", "S": "Survey 105", "E": "Survey 104/3", "W": "Road - Width 9m" },
+    "svgPath": "M 30,40 L 170,25 L 200,165 L 60,180 Z",
+    "svgDims": [
+      { "x": 100, "y": 28, "val": "52.4 m" },
+      { "x": 190, "y": 95, "val": "38.1 m" },
+      { "x": 130, "y": 180, "val": "51.0 m" },
+      { "x": 40, "y": 110, "val": "39.8 m" }
+    ],
+    "vertices": [
+      { "x": 30, "y": 40, "lbl": "A" },
+      { "x": 170, "y": 25, "lbl": "B" },
+      { "x": 200, "y": 165, "lbl": "C" },
+      { "x": 60, "y": 180, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Chennai",
+    "taluk": "Mylapore",
+    "village": "Mylapore Village",
+    "survey": "105",
+    "subdiv": "1",
+    "owner": "M. Abdul Rahman & Partners",
+    "patta": "893",
+    "category": "Private (Ryotwari)",
+    "type": "Ryotwari Punjai (Dry Land)",
+    "area": "0 Hectares, 18.0 Ares (0.44 Acres)",
+    "tax": "₹ 2.40",
+    "soil": "Clayey Loam / Class II",
+    "coords": [
+      [13.0325, 80.2696],
+      [13.0331, 80.2704],
+      [13.0326, 80.2709],
+      [13.0320, 80.2701]
+    ],
+    "adjacent": { "N": "Survey 104/2B", "S": "Survey 106", "E": "Private Land", "W": "Public Path" },
+    "svgPath": "M 40,40 L 190,30 L 170,170 L 20,140 Z",
+    "svgDims": [
+      { "x": 115, "y": 30, "val": "44.1 m" },
+      { "x": 185, "y": 100, "val": "39.5 m" },
+      { "x": 95, "y": 160, "val": "42.0 m" },
+      { "x": 25, "y": 90, "val": "37.2 m" }
+    ],
+    "vertices": [
+      { "x": 40, "y": 40, "lbl": "A" },
+      { "x": 190, "y": 30, "lbl": "B" },
+      { "x": 170, "y": 170, "lbl": "C" },
+      { "x": 20, "y": 140, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Madurai",
+    "taluk": "Madurai South",
+    "village": "Thirupparankundram Village",
+    "survey": "150",
+    "subdiv": "1",
+    "owner": "R. Ganesan & G. Murugan",
+    "patta": "504",
+    "category": "Private (Ryotwari)",
+    "type": "Ryotwari Nanjai (Wet Land)",
+    "area": "0 Hectares, 45.0 Ares (1.11 Acres)",
+    "tax": "₹ 5.80",
+    "soil": "Black Cotton / Class I",
+    "coords": [
+      [9.9252, 78.1198],
+      [9.9258, 78.1205],
+      [9.9251, 78.1210],
+      [9.9245, 78.1203]
+    ],
+    "adjacent": { "N": "Survey 149", "S": "Survey 151", "E": "Water Channel (Vaikkal)", "W": "NH-45 Highway" },
+    "svgPath": "M 20,20 L 180,50 L 160,190 L 40,160 Z",
+    "svgDims": [
+      { "x": 100, "y": 30, "val": "88.2 m" },
+      { "x": 175, "y": 120, "val": "52.4 m" },
+      { "x": 100, "y": 180, "val": "86.0 m" },
+      { "x": 25, "y": 90, "val": "51.1 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 20, "lbl": "A" },
+      { "x": 180, "y": 50, "lbl": "B" },
+      { "x": 160, "y": 190, "lbl": "C" },
+      { "x": 40, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Coimbatore",
+    "taluk": "Coimbatore North",
+    "village": "Tudiyalur Village",
+    "survey": "205",
+    "subdiv": "3A",
+    "owner": "V. Lakshmi Prasanna",
+    "patta": "9082",
+    "category": "Private (Ryotwari)",
+    "type": "Ryotwari Punjai (Dry Land)",
+    "area": "1 Hectares, 2.0 Ares (2.52 Acres)",
+    "tax": "₹ 12.00",
+    "soil": "Red Sandy / Class III",
+    "coords": [
+      [11.0168, 76.9558],
+      [11.0175, 76.9566],
+      [11.0169, 76.9572],
+      [11.0162, 76.9564]
+    ],
+    "adjacent": { "N": "Survey 204", "S": "Survey 205/3B", "E": "Survey 206", "W": "Road - Width 12m" },
+    "svgPath": "M 30,30 L 190,20 L 180,180 L 20,170 Z",
+    "svgDims": [
+      { "x": 110, "y": 20, "val": "105.4 m" },
+      { "x": 190, "y": 100, "val": "95.2 m" },
+      { "x": 100, "y": 180, "val": "104.0 m" },
+      { "x": 20, "y": 100, "val": "94.8 m" }
+    ],
+    "vertices": [
+      { "x": 30, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 180, "lbl": "C" },
+      { "x": 20, "y": 170, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Kanchipuram",
+    "taluk": "Sriperumbudur",
+    "village": "Vallam Village",
+    "survey": "310",
+    "subdiv": "4B",
+    "owner": "SIPCOT Industrial Corporation",
+    "patta": "SIP-310",
+    "category": "Government Poramboke",
+    "type": "Industrial Use Only",
+    "area": "3 Hectares, 50.0 Ares (8.65 Acres)",
+    "tax": "Exempted",
+    "soil": "Sandy / Class IV",
+    "coords": [
+      [12.8387, 79.7016],
+      [12.8398, 79.7028],
+      [12.8390, 79.7036],
+      [12.8379, 79.7024]
+    ],
+    "adjacent": { "N": "SIPCOT Layout Road", "S": "Survey 311", "E": "Industrial Block G", "W": "Survey 309" },
+    "svgPath": "M 15,25 L 185,15 L 195,185 L 25,175 Z",
+    "svgDims": [
+      { "x": 100, "y": 15, "val": "220.5 m" },
+      { "x": 195, "y": 100, "val": "172.4 m" },
+      { "x": 110, "y": 185, "val": "215.0 m" },
+      { "x": 15, "y": 100, "val": "170.1 m" }
+    ],
+    "vertices": [
+      { "x": 15, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 15, "lbl": "B" },
+      { "x": 195, "y": 185, "lbl": "C" },
+      { "x": 25, "y": 175, "lbl": "D" }
+    ]
+  }
+]
