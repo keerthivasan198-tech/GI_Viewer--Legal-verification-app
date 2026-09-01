@@ -1,0 +1,22 @@
+﻿# Dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Build outputs in frontend source (keep tools_dist in web_scrape_viewer)
+legalapp-plotchoice/Landed-legal/dist/

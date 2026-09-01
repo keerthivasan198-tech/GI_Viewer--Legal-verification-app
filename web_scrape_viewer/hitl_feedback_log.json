@@ -1,0 +1,19 @@
+[
+  {
+    "feedback_id": "01aa72ce-de4e-46f0-9f21-5c7b4cb25e6f",
+    "timestamp": "2026-08-27 14:01:05 UTC",
+    "parcel_id": "Sy-358/1B",
+    "original_data": {
+      "owner": "A. Murugan",
+      "door_no": "No. 28"
+    },
+    "corrected_data": {
+      "owner": "A. Murugan (Verified)",
+      "door_no": "No. 42",
+      "survey": "358",
+      "subdiv": "1B"
+    },
+    "user_notes": "Physical ground-truth boundary verified against survey stone.",
+    "status": "APPLIED_TO_LOCAL_REGISTRY"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "GL-001",
+    "zone": "Chennai South",
+    "district": "Chennai",
+    "sro": "Adyar",
+    "village": "Besant Nagar",
+    "streetName": "Besant Avenue Road",
+    "surveyNumber": "245/3B",
+    "guidelineValueSqFt": 14500,
+    "guidelineValueAcre": 631620000,
+    "compositeValueSqFt": 18500,
+    "landClassification": "Residential Special Type I",
+    "effectiveDate": "01-Jul-2024"
+  },
+  {
+    "id": "GL-002",
+    "zone": "Chennai South",
+    "district": "Chennai",
+    "sro": "Velachery",
+    "village": "Velachery",
+    "streetName": "100 Feet Bypass Road",
+    "surveyNumber": "142/3B",
+    "guidelineValueSqFt": 8500,
+    "guidelineValueAcre": 370260000,
+    "compositeValueSqFt": 11500,
+    "landClassification": "Commercial Type I",
+    "effectiveDate": "01-Jul-2024"
+  },
+  {
+    "id": "GL-003",
+    "zone": "Chennai South",
+    "district": "Chengalpattu",
+    "sro": "Sholinganallur",
+    "village": "Thoraipakkam",
+    "streetName": "OMR Rajiv Gandhi Salai",
+    "surveyNumber": "320/2A",
+    "guidelineValueSqFt": 7200,
+    "guidelineValueAcre": 313632000,
+    "compositeValueSqFt": 10200,
+    "landClassification": "Commercial Corridor",
+    "effectiveDate": "01-Jul-2024"
+  }
+]

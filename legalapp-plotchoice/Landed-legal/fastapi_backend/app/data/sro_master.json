@@ -1,0 +1,97 @@
+[
+  {
+    "id": "SRO-001",
+    "zone": "Chennai South",
+    "district": "Chennai",
+    "taluk": "Velachery",
+    "sroCode": "VEL-401",
+    "sroName": "Velachery SRO",
+    "address": "No. 12, 100 Feet Bypass Road, Velachery, Chennai - 600042",
+    "phone": "+91 44 2243 1289",
+    "email": "srovelachery@tnreginet.gov.in",
+    "pincode": "600042",
+    "jurisdictionVillages": [
+      "Velachery",
+      "Madipakkam",
+      "Ullagaram",
+      "Puzhuthivakkam",
+      "Adambakkam"
+    ]
+  },
+  {
+    "id": "SRO-002",
+    "zone": "Chennai South",
+    "district": "Chennai",
+    "taluk": "Mylapore",
+    "sroCode": "MYL-402",
+    "sroName": "Mylapore SRO",
+    "address": "Kutchery Road, Mylapore, Chennai - 600004",
+    "phone": "+91 44 2464 0581",
+    "email": "sromylapore@tnreginet.gov.in",
+    "pincode": "600004",
+    "jurisdictionVillages": [
+      "Mylapore",
+      "San Thome",
+      "R.A. Puram",
+      "Mandaveli",
+      "Alwarpet"
+    ]
+  },
+  {
+    "id": "SRO-003",
+    "zone": "Chennai South",
+    "district": "Chennai",
+    "taluk": "Guindy",
+    "sroCode": "ADY-403",
+    "sroName": "Adyar SRO",
+    "address": "Gandhi Nagar 1st Main Road, Adyar, Chennai - 600020",
+    "phone": "+91 44 2441 3320",
+    "email": "sroadyaar@tnreginet.gov.in",
+    "pincode": "600020",
+    "jurisdictionVillages": [
+      "Adyar",
+      "Besant Nagar",
+      "Thiruvanmiyur",
+      "Urur",
+      "Kotturpuram"
+    ]
+  },
+  {
+    "id": "SRO-004",
+    "zone": "Chennai South",
+    "district": "Chengalpattu",
+    "taluk": "Sholinganallur",
+    "sroCode": "SHO-501",
+    "sroName": "Sholinganallur SRO",
+    "address": "OMR Junction, Sholinganallur, Chennai - 600119",
+    "phone": "+91 44 2450 1190",
+    "email": "srosholinganallur@tnreginet.gov.in",
+    "pincode": "600119",
+    "jurisdictionVillages": [
+      "Sholinganallur",
+      "Perungudi",
+      "Thoraipakkam",
+      "Karapakkam",
+      "Semmancheri",
+      "Navalur"
+    ]
+  },
+  {
+    "id": "SRO-005",
+    "zone": "Chennai Central",
+    "district": "Chennai",
+    "taluk": "Egmore",
+    "sroCode": "TNG-301",
+    "sroName": "T. Nagar SRO",
+    "address": "10, Moores Road, Thousand Lights, Chennai - 600006",
+    "phone": "+91 44 2833 4412",
+    "email": "srotnagar@tnreginet.gov.in",
+    "pincode": "600017",
+    "jurisdictionVillages": [
+      "T. Nagar",
+      "Teynampet",
+      "Mambalam",
+      "Nungambakkam"
+    ]
+  }
+]

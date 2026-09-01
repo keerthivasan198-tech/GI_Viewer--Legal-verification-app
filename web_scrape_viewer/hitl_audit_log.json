@@ -1,0 +1,1349 @@
+[
+  {
+    "log_id": "1066c9d5-0898-4b9d-bfde-d298ee602296",
+    "timestamp": "2026-08-27 14:01:05 UTC",
+    "unix_timestamp": 1787839265.0751185,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "6308c137-9d0a-4147-a1b7-00e6c4006661",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Land Records Portal)",
+      "challenge_type": "OTP_2FA",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "8b778d33-139f-4935-9329-f48fc6dc27f4",
+    "timestamp": "2026-08-27 14:01:05 UTC",
+    "unix_timestamp": 1787839265.1313357,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "6308c137-9d0a-4147-a1b7-00e6c4006661",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Land Records Portal)",
+      "authorized_by": "End-User (Delegated Authority via 2FA)",
+      "turnaround_time_seconds": 0.06
+    }
+  },
+  {
+    "log_id": "a376b8e3-ee98-49c9-80ad-d9a9dabdf987",
+    "timestamp": "2026-08-27 14:03:05 UTC",
+    "unix_timestamp": 1787839385.0301425,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "93fc9bcf-1575-449c-a9b6-e77ecee1ad0b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "challenge_type": "OTP_2FA",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "ce8fa3f0-7f1b-4035-b091-2d4c41d473c8",
+    "timestamp": "2026-08-27 14:03:10 UTC",
+    "unix_timestamp": 1787839390.6695507,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "93fc9bcf-1575-449c-a9b6-e77ecee1ad0b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "authorized_by": "End-User (Session Delegator via 2FA)",
+      "turnaround_time_seconds": 5.64
+    }
+  },
+  {
+    "log_id": "1a2a47d4-2a6d-4bfe-af59-0603bd3e8994",
+    "timestamp": "2026-08-28 03:21:19 UTC",
+    "unix_timestamp": 1787887279.8495214,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "1fe660e9-1ee6-4b37-9c9a-eb84811ad1b5",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "challenge_type": "OTP_2FA",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "15f5ee62-65ad-4a37-b547-f4a412840f89",
+    "timestamp": "2026-08-28 03:21:34 UTC",
+    "unix_timestamp": 1787887294.6747003,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "1fe660e9-1ee6-4b37-9c9a-eb84811ad1b5",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "authorized_by": "End-User (Session Delegator via 2FA)",
+      "turnaround_time_seconds": 14.83
+    }
+  },
+  {
+    "log_id": "3b461726-3165-47e3-ae60-bcfa071eb2ef",
+    "timestamp": "2026-08-28 03:21:46 UTC",
+    "unix_timestamp": 1787887306.2545383,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "f452baac-b06f-47e4-8194-eccecc963380",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "challenge_type": "OTP_2FA",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "23cb558f-1196-4883-85c9-e4affc3522d6",
+    "timestamp": "2026-08-28 03:21:48 UTC",
+    "unix_timestamp": 1787887308.7530868,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "f452baac-b06f-47e4-8194-eccecc963380",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "authorized_by": "End-User (Session Delegator via 2FA)",
+      "turnaround_time_seconds": 2.5
+    }
+  },
+  {
+    "log_id": "ed1df197-89df-4c04-a7cc-9131ff609736",
+    "timestamp": "2026-08-28 03:22:11 UTC",
+    "unix_timestamp": 1787887331.6877537,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "50e9f0e1-617b-4073-978b-8f24ae24f21d",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "challenge_type": "OTP_2FA",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "4a4dfa67-3af5-4b8b-aa85-7e22ad16fda9",
+    "timestamp": "2026-08-28 03:22:14 UTC",
+    "unix_timestamp": 1787887334.220538,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "50e9f0e1-617b-4073-978b-8f24ae24f21d",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "authorized_by": "End-User (Session Delegator via 2FA)",
+      "turnaround_time_seconds": 2.53
+    }
+  },
+  {
+    "log_id": "63f68616-d533-43b7-ae97-8fafb105a445",
+    "timestamp": "2026-08-28 03:24:20 UTC",
+    "unix_timestamp": 1787887460.7488565,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "3b34792a-c915-4644-b064-152211e1b6ae",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "challenge_type": "OTP_2FA",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "f8f6b069-49bf-4fcf-95f2-c80b9be2b683",
+    "timestamp": "2026-08-28 03:30:51 UTC",
+    "unix_timestamp": 1787887851.575848,
+    "event_type": "INTERRUPTION_GATE_TIMED_OUT",
+    "session_id": "3b34792a-c915-4644-b064-152211e1b6ae",
+    "details": {
+      "reason": "TTL Exceeded"
+    }
+  },
+  {
+    "log_id": "110ed9ef-1a9b-4a11-a597-b2cd07ef4c75",
+    "timestamp": "2026-08-28 03:30:51 UTC",
+    "unix_timestamp": 1787887851.615534,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "c7ae811e-acbb-44cd-897c-ae138f66bdef",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in (Official Registry)",
+      "challenge_type": "OTP_2FA",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "4bedd373-c551-4cac-933a-ffd15b946aa9",
+    "timestamp": "2026-08-28 04:28:12 UTC",
+    "unix_timestamp": 1787891292.5737991,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "83a4af98-bc81-438f-b4d9-b0773ca3b91d",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "1ff824cb-8559-43ce-8680-efefe9ab05e2",
+    "timestamp": "2026-08-28 04:28:12 UTC",
+    "unix_timestamp": 1787891292.595004,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "83a4af98-bc81-438f-b4d9-b0773ca3b91d",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "0644aaa7-2e8f-4553-9e4b-9224c23c2a03",
+    "timestamp": "2026-08-28 04:29:46 UTC",
+    "unix_timestamp": 1787891386.4625242,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "49f9115f-f9d4-4228-9218-e51d9324609c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "b679977b-9071-4f86-8bb4-13c9e088cbc8",
+    "timestamp": "2026-08-28 04:29:46 UTC",
+    "unix_timestamp": 1787891386.4871657,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "49f9115f-f9d4-4228-9218-e51d9324609c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "56c8cce2-98aa-49ae-b295-cc5822ee4c12",
+    "timestamp": "2026-08-28 04:29:46 UTC",
+    "unix_timestamp": 1787891386.507915,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "49f9115f-f9d4-4228-9218-e51d9324609c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "turnaround_time_seconds": 0.05
+    }
+  },
+  {
+    "log_id": "1174b77b-8433-4b63-8c81-f52675e243db",
+    "timestamp": "2026-08-28 05:01:58 UTC",
+    "unix_timestamp": 1787893318.5449078,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "797a22fe-514c-4e6a-89ed-876df0901212",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "c98fc6e7-5af5-4945-aa78-907484a251c4",
+    "timestamp": "2026-08-28 05:01:58 UTC",
+    "unix_timestamp": 1787893318.5695033,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "797a22fe-514c-4e6a-89ed-876df0901212",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "aa35c7b3-41e7-4009-813b-48c8720b6d71",
+    "timestamp": "2026-08-28 05:01:58 UTC",
+    "unix_timestamp": 1787893318.5948637,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "797a22fe-514c-4e6a-89ed-876df0901212",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "turnaround_time_seconds": 0.05
+    }
+  },
+  {
+    "log_id": "07534d10-03c9-4a05-82c4-939df9b408e6",
+    "timestamp": "2026-08-28 09:41:29 UTC",
+    "unix_timestamp": 1787910089.3829696,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "11d38d8a-d2aa-4c8d-9512-b67c84fd20ef",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0223, 80.2387]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "a33dc887-8498-4321-8455-31e6685e1804",
+    "timestamp": "2026-08-28 09:41:42 UTC",
+    "unix_timestamp": 1787910102.853367,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "11d38d8a-d2aa-4c8d-9512-b67c84fd20ef",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0223, 80.2387]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "turnaround_time_seconds": 13.47
+    }
+  },
+  {
+    "log_id": "c50e2b5f-af4c-4011-a3f7-9dc94e39ae58",
+    "timestamp": "2026-08-28 09:46:15 UTC",
+    "unix_timestamp": 1787910375.2545407,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "de21f39e-4b56-453f-a56d-0d0f8d775a1a",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0242, 80.2400]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "456e5bd7-0ea6-4e22-966e-a2b13b3adbb9",
+    "timestamp": "2026-08-28 09:48:14 UTC",
+    "unix_timestamp": 1787910494.200761,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "71e3bc62-85da-4600-ac63-6ef353d37257",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0241, 80.2399]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "ad805e6e-f6a8-4207-bcef-be0801a706e7",
+    "timestamp": "2026-08-28 09:48:25 UTC",
+    "unix_timestamp": 1787910505.442939,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "71e3bc62-85da-4600-ac63-6ef353d37257",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0241, 80.2399]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-260B2F1B4A69",
+      "turnaround_time_seconds": 11.24
+    }
+  },
+  {
+    "log_id": "70f8c8b4-70df-402f-b863-7672c873b73a",
+    "timestamp": "2026-08-28 09:49:46 UTC",
+    "unix_timestamp": 1787910586.3980448,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "6f57ff18-fa8b-4d84-a0f5-e3661e96abaa",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "d2565ccb-43fc-486e-b6dc-096b3a54a572",
+    "timestamp": "2026-08-28 09:49:46 UTC",
+    "unix_timestamp": 1787910586.4251914,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "6f57ff18-fa8b-4d84-a0f5-e3661e96abaa",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "decc18a7-48a5-4d5d-8236-7bd33011a156",
+    "timestamp": "2026-08-28 09:49:46 UTC",
+    "unix_timestamp": 1787910586.4559617,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "6f57ff18-fa8b-4d84-a0f5-e3661e96abaa",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-1488A4F68855",
+      "turnaround_time_seconds": 0.06
+    }
+  },
+  {
+    "log_id": "b48308ac-0208-4bc9-99c4-8a9702d4c971",
+    "timestamp": "2026-08-28 09:51:21 UTC",
+    "unix_timestamp": 1787910681.5762997,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "368b2ba5-3439-43eb-9ea8-f0467d9c50ba",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0222, 80.2388]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "81084094-98dc-4324-9965-0813e4d7eca9",
+    "timestamp": "2026-08-28 09:51:32 UTC",
+    "unix_timestamp": 1787910692.1571302,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "368b2ba5-3439-43eb-9ea8-f0467d9c50ba",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0222, 80.2388]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-1D1C6337BCA5",
+      "turnaround_time_seconds": 10.58
+    }
+  },
+  {
+    "log_id": "2c58793e-530b-4d19-8cca-ba8272abd95d",
+    "timestamp": "2026-08-28 10:08:38 UTC",
+    "unix_timestamp": 1787911718.6462255,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "f670699b-07f1-49a6-abcc-df36553db918",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "f1cebe05-32f8-47e1-b2d6-033fb6a22f15",
+    "timestamp": "2026-08-28 10:08:38 UTC",
+    "unix_timestamp": 1787911718.6659582,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "f670699b-07f1-49a6-abcc-df36553db918",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "a1dc909f-7019-46ef-8237-652f0b3549ed",
+    "timestamp": "2026-08-28 10:08:38 UTC",
+    "unix_timestamp": 1787911718.6877208,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "f670699b-07f1-49a6-abcc-df36553db918",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-90C41FADA902",
+      "turnaround_time_seconds": 0.04
+    }
+  },
+  {
+    "log_id": "fb2497b2-3480-4e43-bb37-90a9c22044f0",
+    "timestamp": "2026-08-28 10:51:46 UTC",
+    "unix_timestamp": 1787914306.7350335,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "f9fc8ba0-d5f0-47c4-92fe-adfe7881d6c9",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8285, 78.6850]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "2f484a0c-d9f2-4359-a70a-7b3afd026675",
+    "timestamp": "2026-08-28 11:12:11 UTC",
+    "unix_timestamp": 1787915531.517791,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "65e031b0-afe1-458d-bb6e-adb7bf0531c5",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "4375e654-8330-49cb-8a1f-90754d2fdb43",
+    "timestamp": "2026-08-28 11:12:11 UTC",
+    "unix_timestamp": 1787915531.543371,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "65e031b0-afe1-458d-bb6e-adb7bf0531c5",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "9e1d9bf5-086e-4fd3-8364-f736962b05ad",
+    "timestamp": "2026-08-28 11:12:11 UTC",
+    "unix_timestamp": 1787915531.5797498,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "65e031b0-afe1-458d-bb6e-adb7bf0531c5",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-548FBBEB465B",
+      "turnaround_time_seconds": 0.06
+    }
+  },
+  {
+    "log_id": "ab523621-76ab-4cc5-823d-50f890d62860",
+    "timestamp": "2026-08-28 11:13:20 UTC",
+    "unix_timestamp": 1787915600.8543735,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "f297e225-baf7-4739-b297-22dbe2b89f70",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [12.9767, 80.2474]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "74646066-428b-490c-af3b-3976f80fa8ed",
+    "timestamp": "2026-08-28 11:13:30 UTC",
+    "unix_timestamp": 1787915610.4581592,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "f297e225-baf7-4739-b297-22dbe2b89f70",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [12.9767, 80.2474]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-1B042E42EBF4",
+      "turnaround_time_seconds": 9.6
+    }
+  },
+  {
+    "log_id": "b74b6352-4b76-4b22-b0a3-7fa623ccff89",
+    "timestamp": "2026-08-28 11:14:08 UTC",
+    "unix_timestamp": 1787915648.630109,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "e7db8c4e-9378-468d-8237-d5075e2bd6f2",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [12.8782, 80.1856]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "3327ae26-326e-458e-828f-1e6fc61784eb",
+    "timestamp": "2026-08-28 11:22:32 UTC",
+    "unix_timestamp": 1787916152.85799,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "4caa8249-bb1e-4a90-81a9-387a847a4350",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "6b7dba3f-81b7-4d45-a44f-546489c149f7",
+    "timestamp": "2026-08-28 11:22:32 UTC",
+    "unix_timestamp": 1787916152.8792884,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "4caa8249-bb1e-4a90-81a9-387a847a4350",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "1d31f936-1df6-4fc3-9ab0-4023bcb3da2f",
+    "timestamp": "2026-08-28 11:22:32 UTC",
+    "unix_timestamp": 1787916152.9000068,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "4caa8249-bb1e-4a90-81a9-387a847a4350",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-0B4E8E528351",
+      "turnaround_time_seconds": 0.04
+    }
+  },
+  {
+    "log_id": "5871025b-9210-40ba-a236-0f25775b8a98",
+    "timestamp": "2026-08-28 11:28:04 UTC",
+    "unix_timestamp": 1787916484.6510904,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "75e7b121-067f-4ffe-aecc-70a3c7884f05",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "c7d790eb-5f01-4a88-9d3c-da8dbcf5ca13",
+    "timestamp": "2026-08-28 11:28:04 UTC",
+    "unix_timestamp": 1787916484.6724854,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "75e7b121-067f-4ffe-aecc-70a3c7884f05",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "4888fae4-eff4-42f1-a996-d9229420e5f9",
+    "timestamp": "2026-08-28 11:28:04 UTC",
+    "unix_timestamp": 1787916484.6927216,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "75e7b121-067f-4ffe-aecc-70a3c7884f05",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-8CF58A2B1395",
+      "turnaround_time_seconds": 0.04
+    }
+  },
+  {
+    "log_id": "7ab6941b-253d-46eb-a3ed-a804942d6c46",
+    "timestamp": "2026-08-28 11:29:26 UTC",
+    "unix_timestamp": 1787916566.4598517,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "fae347c8-eb41-4170-b446-3b33eeab5795",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8186, 77.9317]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "cbd3989c-a043-4e44-a6b6-f8d7cdbbaab7",
+    "timestamp": "2026-08-28 11:29:39 UTC",
+    "unix_timestamp": 1787916579.3478591,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "a6194503-afdc-4207-85e5-8f78cf4f876f",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [11.5649, 80.7385]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "1fd38035-28a5-4714-ac77-854454284e8e",
+    "timestamp": "2026-08-28 11:35:03 UTC",
+    "unix_timestamp": 1787916903.522639,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "44e79a3e-f68c-4ec8-bc7e-441091599a26",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "620ab483-b99e-4b22-9664-41c7103d07f9",
+    "timestamp": "2026-08-28 11:35:03 UTC",
+    "unix_timestamp": 1787916903.5448015,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "44e79a3e-f68c-4ec8-bc7e-441091599a26",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "a224f4ca-5317-4172-9ca4-30c59443cd73",
+    "timestamp": "2026-08-28 11:35:03 UTC",
+    "unix_timestamp": 1787916903.5672395,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "44e79a3e-f68c-4ec8-bc7e-441091599a26",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-1E26761E74A2",
+      "turnaround_time_seconds": 0.04
+    }
+  },
+  {
+    "log_id": "d0ac8f45-cc2e-4716-8217-84d6a97ad063",
+    "timestamp": "2026-08-28 12:29:23 UTC",
+    "unix_timestamp": 1787920163.4622006,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "1950654c-5eca-40ea-b81b-48bf09fd554c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "8d0ecf3c-bc38-4b8f-b0b9-16c65f6c1a8e",
+    "timestamp": "2026-08-28 12:29:23 UTC",
+    "unix_timestamp": 1787920163.4771636,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "1950654c-5eca-40ea-b81b-48bf09fd554c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "f69b70ad-77ba-49ac-a4d8-63fda30030d7",
+    "timestamp": "2026-08-28 12:29:23 UTC",
+    "unix_timestamp": 1787920163.4926054,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "1950654c-5eca-40ea-b81b-48bf09fd554c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-3D54D1A8E246",
+      "turnaround_time_seconds": 0.03
+    }
+  },
+  {
+    "log_id": "9e68b9f7-7748-4a87-9c18-035e6ee652af",
+    "timestamp": "2026-08-28 12:35:49 UTC",
+    "unix_timestamp": 1787920549.4581354,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "9f425aaa-b1aa-4ca2-a42c-ac939a8175c1",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "e84907f5-915c-4a34-ab6d-66a35d89057f",
+    "timestamp": "2026-08-28 12:35:49 UTC",
+    "unix_timestamp": 1787920549.4894774,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "9f425aaa-b1aa-4ca2-a42c-ac939a8175c1",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "e7a2edf8-250a-47bf-a484-99ce40b1295b",
+    "timestamp": "2026-08-28 12:35:49 UTC",
+    "unix_timestamp": 1787920549.5123262,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "9f425aaa-b1aa-4ca2-a42c-ac939a8175c1",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-82E46C6418E8",
+      "turnaround_time_seconds": 0.05
+    }
+  },
+  {
+    "log_id": "3bcf1ec5-d7fb-4663-966a-69793c6480ca",
+    "timestamp": "2026-08-28 12:43:57 UTC",
+    "unix_timestamp": 1787921037.1008687,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "87ec48ee-82a2-4426-8c3b-8a0c47a27826",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "11eab41f-9568-44d3-889b-2ecdb6c00056",
+    "timestamp": "2026-08-28 12:43:57 UTC",
+    "unix_timestamp": 1787921037.1182375,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "87ec48ee-82a2-4426-8c3b-8a0c47a27826",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "91436c78-0d3b-4fbb-b5c6-6bc926a48e42",
+    "timestamp": "2026-08-28 12:43:57 UTC",
+    "unix_timestamp": 1787921037.143819,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "87ec48ee-82a2-4426-8c3b-8a0c47a27826",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-5D3BF2FB8A77",
+      "turnaround_time_seconds": 0.04
+    }
+  },
+  {
+    "log_id": "dd55e6bf-71b0-46a4-a06e-a8eff99f56be",
+    "timestamp": "2026-08-28 12:52:41 UTC",
+    "unix_timestamp": 1787921561.605399,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "240e43c2-39b1-4281-94f7-cded6872f02b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "87bc624f-13f2-4719-8140-c1c6c0a741fe",
+    "timestamp": "2026-08-28 12:52:41 UTC",
+    "unix_timestamp": 1787921561.624471,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "240e43c2-39b1-4281-94f7-cded6872f02b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "e0bc4848-3b53-487f-bf05-5d2cd90ec7df",
+    "timestamp": "2026-08-28 12:52:41 UTC",
+    "unix_timestamp": 1787921561.6506941,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "240e43c2-39b1-4281-94f7-cded6872f02b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-A831802DCB39",
+      "turnaround_time_seconds": 0.05
+    }
+  },
+  {
+    "log_id": "197f60cd-423a-4086-87c6-f94aa2a82946",
+    "timestamp": "2026-08-28 12:56:25 UTC",
+    "unix_timestamp": 1787921785.6504292,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "b07734aa-d6fc-4c38-912a-7687726c1e14",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [14.0603, 81.1670]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "d23ac81c-17ad-4dbb-9f41-bbbf721971c1",
+    "timestamp": "2026-08-28 12:57:29 UTC",
+    "unix_timestamp": 1787921849.1176202,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "8440ed47-65de-4c49-be2a-78fe119cd5dc",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [13.0775, 80.1382]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "1ca6b268-fe34-4145-ba03-61ad9a88d71f",
+    "timestamp": "2026-08-28 12:59:59 UTC",
+    "unix_timestamp": 1787921999.073461,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "208c944c-a051-46e0-ad2e-38123e676814",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "7dee53bc-5e75-4fc6-92e5-e255c115a208",
+    "timestamp": "2026-08-28 12:59:59 UTC",
+    "unix_timestamp": 1787921999.100082,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "208c944c-a051-46e0-ad2e-38123e676814",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "64989757-d69e-4b77-ad30-918fdfe65a2f",
+    "timestamp": "2026-08-28 12:59:59 UTC",
+    "unix_timestamp": 1787921999.1191556,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "208c944c-a051-46e0-ad2e-38123e676814",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in",
+      "authorized_by": "Human User",
+      "delegated_session_token": "TN-AUTH-DELEGATED-08BC2FCBEDB8",
+      "turnaround_time_seconds": 0.05
+    }
+  },
+  {
+    "log_id": "b9b6c1a9-4234-4253-9027-6f05c2e087dc",
+    "timestamp": "2026-08-28 13:03:28 UTC",
+    "unix_timestamp": 1787922208.9855812,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "a1df02a3-3910-437f-a45d-bfb1298981cf",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8218, 78.6792]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "5cdcbd19-c10a-41c4-8b15-4f9460f2b14c",
+    "timestamp": "2026-08-28 13:50:14 UTC",
+    "unix_timestamp": 1787925014.9670074,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "04cb3518-0d3b-45b3-953d-895428f71af1",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [14.1565, 91.8419]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "bc5b0d35-9aa4-4130-a4ae-39ba49d675c5",
+    "timestamp": "2026-08-28 13:56:10 UTC",
+    "unix_timestamp": 1787925370.9236903,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "cb047148-fc31-46cf-8028-b2c43519178e",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8165, 78.6896]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "1f77fe7d-2ecf-458c-9bbe-ff5c9a3b8ce1",
+    "timestamp": "2026-08-28 13:57:27 UTC",
+    "unix_timestamp": 1787925447.8752763,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "ac0d10fe-1270-4d91-9884-8295bd3f7cde",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8165, 78.6907]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "a45dc4a2-66b9-4209-a387-14d552595391",
+    "timestamp": "2026-08-28 14:00:20 UTC",
+    "unix_timestamp": 1787925620.5912576,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "0c685354-979c-4e83-8e20-3c9d0d1ca921",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8166, 78.6905]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "d86a34aa-1481-42c1-9303-abb0656ff517",
+    "timestamp": "2026-08-28 14:06:01 UTC",
+    "unix_timestamp": 1787925961.6199667,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "44d81c38-00f8-41fc-b637-235f2c5fb064",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8477, 78.6963]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "cbcaf204-9403-495a-9b9a-fdc2acf48693",
+    "timestamp": "2026-08-28 14:06:38 UTC",
+    "unix_timestamp": 1787925998.3202865,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "c8bddd54-7c0b-44f0-8a89-0cd99c2b92ef",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6977]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "bb466c08-a750-4c32-87bb-5451eaf975d7",
+    "timestamp": "2026-08-28 14:06:47 UTC",
+    "unix_timestamp": 1787926007.6053612,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "c8bddd54-7c0b-44f0-8a89-0cd99c2b92ef",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6977]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-723061C5BF7E",
+      "turnaround_time_seconds": 9.28
+    }
+  },
+  {
+    "log_id": "1b007015-f935-4669-b15e-ade8233db657",
+    "timestamp": "2026-08-28 14:06:57 UTC",
+    "unix_timestamp": 1787926017.5298617,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "1f369e92-0aab-4915-9bca-31e741f259a4",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8495, 78.6976]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "82e6d98b-d823-46db-8ff1-9c1fd16ff1ca",
+    "timestamp": "2026-08-28 14:07:04 UTC",
+    "unix_timestamp": 1787926024.939124,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "1f369e92-0aab-4915-9bca-31e741f259a4",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8495, 78.6976]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-FB9791E4EDB6",
+      "turnaround_time_seconds": 7.41
+    }
+  },
+  {
+    "log_id": "705a1e63-7ac6-4f95-8c35-52a41f92951f",
+    "timestamp": "2026-08-28 14:11:42 UTC",
+    "unix_timestamp": 1787926302.3178427,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "e8fae3fa-9152-438e-8140-7da933eb271e",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6978]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "4eed62d6-b05f-4738-a4bb-83f87c2f46e9",
+    "timestamp": "2026-08-28 14:11:58 UTC",
+    "unix_timestamp": 1787926318.718335,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "f0209df0-a17a-4d98-bdd1-9de2615ccbd6",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6977]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "600d04c4-a039-4993-a598-ac437db3a4c7",
+    "timestamp": "2026-08-28 14:12:06 UTC",
+    "unix_timestamp": 1787926326.3850396,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "f0209df0-a17a-4d98-bdd1-9de2615ccbd6",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6977]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-FDC713A625DC",
+      "turnaround_time_seconds": 7.67
+    }
+  },
+  {
+    "log_id": "fa102fc2-e7b8-4d90-a135-b596befbdc5f",
+    "timestamp": "2026-08-28 14:15:01 UTC",
+    "unix_timestamp": 1787926501.530421,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "da096c0c-81f9-4303-8704-2743462af1e6",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8491, 78.6974]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "e5eec7e9-b11e-48d9-80b3-abb06a0e3d51",
+    "timestamp": "2026-08-28 14:15:06 UTC",
+    "unix_timestamp": 1787926506.199254,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "42323193-9209-444e-b533-0e6a58275546",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8492, 78.6974]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "9e35d427-347b-4980-b470-0eadcc2fc3a0",
+    "timestamp": "2026-08-28 14:15:13 UTC",
+    "unix_timestamp": 1787926513.6712523,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "42323193-9209-444e-b533-0e6a58275546",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8492, 78.6974]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-FAE5ECA2C451",
+      "turnaround_time_seconds": 7.47
+    }
+  },
+  {
+    "log_id": "da2b031e-98ae-43e4-8318-10d8cf2e75df",
+    "timestamp": "2026-08-28 14:15:28 UTC",
+    "unix_timestamp": 1787926528.7181447,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "595108b0-edb0-4676-b297-e9fd14b3f695",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6973]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "2bf439cc-245d-4b6e-ab3d-032b00598632",
+    "timestamp": "2026-08-28 14:15:40 UTC",
+    "unix_timestamp": 1787926540.7270246,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "833f6f1d-5e99-4c02-8e24-e1f111173875",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6970]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "02949d15-d59d-40c8-a85b-fdc1ffbab4be",
+    "timestamp": "2026-08-28 14:15:48 UTC",
+    "unix_timestamp": 1787926548.0228662,
+    "event_type": "INTERRUPTION_GATE_FAILED_CHALLENGE",
+    "session_id": "833f6f1d-5e99-4c02-8e24-e1f111173875",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8494, 78.6970]",
+      "reason": "Human input mismatched security challenge",
+      "cooldown_seconds": 120
+    }
+  },
+  {
+    "log_id": "2fd53d02-1c61-401e-ba89-7faf37b04023",
+    "timestamp": "2026-08-28 14:15:57 UTC",
+    "unix_timestamp": 1787926557.5014143,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "ec60251e-339e-46bd-a757-9614c3b073f6",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8492, 78.6968]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "85a1f778-2a26-4336-b3a9-dc666348067d",
+    "timestamp": "2026-08-28 14:16:06 UTC",
+    "unix_timestamp": 1787926566.2048376,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "ec60251e-339e-46bd-a757-9614c3b073f6",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8492, 78.6968]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-1ACBDBC91175",
+      "turnaround_time_seconds": 8.7
+    }
+  },
+  {
+    "log_id": "1cfb0283-7805-4af8-a392-697fb4ddaa9d",
+    "timestamp": "2026-08-28 14:18:36 UTC",
+    "unix_timestamp": 1787926716.4515111,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "a0d45fa3-6fa5-401d-af42-53ccb5c2fde0",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8572, 78.6995]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "d3f55fbe-5928-44d9-9504-a1cc1b34845e",
+    "timestamp": "2026-08-28 14:18:46 UTC",
+    "unix_timestamp": 1787926726.7574637,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "76522129-b9c3-440b-9a7d-8402dfc527be",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8561, 78.7020]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "d0b224a0-1a60-446a-96c1-8594a10db7fa",
+    "timestamp": "2026-08-28 14:18:51 UTC",
+    "unix_timestamp": 1787926731.6986825,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "d8a2a23f-db72-4e3f-bef5-50f0d7c640ca",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8557, 78.7038]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "6b61188c-5965-4c01-b825-5d93609701e6",
+    "timestamp": "2026-08-28 14:18:56 UTC",
+    "unix_timestamp": 1787926736.250634,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "f0fc8dbf-b6a1-46ee-a726-e7299f618e65",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8560, 78.7031]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "252f0f64-245c-4678-bb45-59916ddf4952",
+    "timestamp": "2026-08-28 16:04:54 UTC",
+    "unix_timestamp": 1787933094.203259,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "cef13525-13c3-4ef3-9ab0-7185a00d8df3",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8662, 78.6947]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "65c0bade-baf3-4336-ba66-bd44e90c2203",
+    "timestamp": "2026-08-28 16:05:10 UTC",
+    "unix_timestamp": 1787933110.7466357,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "0f71dabf-50e2-4c5f-abe3-c0b5bcdbf71b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8497, 78.6975]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "2191cf28-6da9-4dd4-b774-f81556b718b4",
+    "timestamp": "2026-08-28 16:05:17 UTC",
+    "unix_timestamp": 1787933117.7312303,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "0f71dabf-50e2-4c5f-abe3-c0b5bcdbf71b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8497, 78.6975]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-3E7EBC87322C",
+      "turnaround_time_seconds": 6.99
+    }
+  },
+  {
+    "log_id": "86894518-6c1c-4ce3-bc3f-2b867a5e75dc",
+    "timestamp": "2026-08-28 16:05:29 UTC",
+    "unix_timestamp": 1787933129.933488,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "0f71dabf-50e2-4c5f-abe3-c0b5bcdbf71b",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8497, 78.6975]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-059D933F002C",
+      "turnaround_time_seconds": 19.19
+    }
+  },
+  {
+    "log_id": "d1b53a91-e138-4382-ac2c-7f56afbf5242",
+    "timestamp": "2026-08-28 16:05:50 UTC",
+    "unix_timestamp": 1787933150.2812002,
+    "event_type": "INTERRUPTION_GATE_OPENED",
+    "session_id": "37eb0fc0-aae2-4731-833b-64cfb823096c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8491, 78.6973]",
+      "challenge_type": "CAPTCHA_CHALLENGE",
+      "expires_in_seconds": 120
+    }
+  },
+  {
+    "log_id": "ab494974-660c-4f9d-9e38-891cd6f1444f",
+    "timestamp": "2026-08-28 16:05:59 UTC",
+    "unix_timestamp": 1787933159.112641,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "37eb0fc0-aae2-4731-833b-64cfb823096c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8491, 78.6973]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-EE657F8570D9",
+      "turnaround_time_seconds": 8.83
+    }
+  },
+  {
+    "log_id": "8e67622a-9f9c-4002-bac6-ff21b80dab9f",
+    "timestamp": "2026-08-28 16:06:08 UTC",
+    "unix_timestamp": 1787933168.1937838,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "37eb0fc0-aae2-4731-833b-64cfb823096c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8491, 78.6973]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-7495A4057D75",
+      "turnaround_time_seconds": 17.91
+    }
+  },
+  {
+    "log_id": "0248fd87-c02f-490b-a33f-5d0a2989afae",
+    "timestamp": "2026-08-28 16:06:10 UTC",
+    "unix_timestamp": 1787933170.6579638,
+    "event_type": "INTERRUPTION_GATE_RESUMED",
+    "session_id": "37eb0fc0-aae2-4731-833b-64cfb823096c",
+    "details": {
+      "flow_type": "AUTH_DELEGATION",
+      "target_resource": "eservices.tn.gov.in [10.8491, 78.6973]",
+      "authorized_by": "Human User (Delegated Authority)",
+      "delegated_session_token": "TN-AUTH-DELEGATED-E084E7B0A27E",
+      "turnaround_time_seconds": 20.38
+    }
+  }
+]

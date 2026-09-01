@@ -1,0 +1,28 @@
+[
+  {
+    "id": "HRCE-001",
+    "prohibitionType": "HRCE_TEMPLE",
+    "institutionName": "Arulmigu Kapaleeshwarar Temple",
+    "district": "Chennai",
+    "taluk": "Mylapore",
+    "village": "Mylapore",
+    "surveyNumber": "128",
+    "subDivision": "4A",
+    "extent": "1.45 Acres",
+    "gazetteReference": "TN Gazette No. 248/HRCE/Sec22A/2021",
+    "description": "Temple Inam Devadhanam Land — Strictly prohibited from private alienation or conveyance under Sec 22-A."
+  },
+  {
+    "id": "HRCE-002",
+    "prohibitionType": "HRCE_TEMPLE",
+    "institutionName": "Arulmigu Dhandeeswaram Temple",
+    "district": "Chennai",
+    "taluk": "Velachery",
+    "village": "Velachery",
+    "surveyNumber": "210",
+    "subDivision": "1B",
+    "extent": "0.85 Acres",
+    "gazetteReference": "TN Gazette No. 112/HRCE/2019",
+    "description": "Temple Poojari Manyam Inam. Any sale is void ab initio."
+  }
+]

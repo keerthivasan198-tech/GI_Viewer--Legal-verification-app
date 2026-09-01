@@ -1,0 +1,705 @@
+[
+  {
+    "district": "Chennai",
+    "taluk": "Mylapore",
+    "village": "Zone 13 Adyar",
+    "survey": "358",
+    "subdiv": "1B",
+    "owner": "Dr. K. Sivasubramanian",
+    "owner_tamil": "டாக்டர் கே. சிவசுப்பிரமணியன்",
+    "door_no": "Door No. 12, Plot 4",
+    "street_address": "Door No. 12, Plot 4, Gandhi Mandapam Road, Zone 13 Adyar, Chennai - 600020",
+    "patta": "8300",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site (Grama Natham)",
+    "area": "0 Hectares, 2.40 Ares (2,583 Sq.Ft / 5.93 Cents)",
+    "tax": "₹ 12.50",
+    "soil": "Sandy Loam / Class II",
+    "coords": [
+      [13.02235, 80.23719],
+      [13.02245, 80.23732],
+      [13.02231, 80.23742],
+      [13.02221, 80.23729]
+    ],
+    "adjacent": { "N": "Survey 357/1B", "S": "Survey 359/1B", "E": "Survey 358/2B", "W": "Gandhi Mandapam Road (Width 18m)" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "16.4 m" },
+      { "x": 180, "y": 90, "val": "14.8 m" },
+      { "x": 97, "y": 160, "val": "16.1 m" },
+      { "x": 20, "y": 90, "val": "14.5 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Coimbatore",
+    "taluk": "Coimbatore South",
+    "village": "RS Puram",
+    "survey": "412",
+    "subdiv": "2A",
+    "owner": "R. Soundararajan & S. Meenakshi",
+    "owner_tamil": "ஆர். சௌந்தரராஜன் & எஸ். மீனாட்சி",
+    "door_no": "Door No. 45, D.B. Road",
+    "street_address": "Door No. 45, Diwan Bahadur Road, RS Puram, Coimbatore - 641002",
+    "patta": "4512",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Commercial & Residential (Mixed)",
+    "area": "0 Hectares, 3.80 Ares (4,090 Sq.Ft / 9.39 Cents)",
+    "tax": "₹ 24.00",
+    "soil": "Red Loam / Class I",
+    "coords": [
+      [11.0082, 76.9515],
+      [11.0084, 76.9518],
+      [11.0081, 76.9520],
+      [11.0079, 76.9517]
+    ],
+    "adjacent": { "N": "Survey 411/2A", "S": "Survey 413/2A", "E": "Survey 412/2B", "W": "Diwan Bahadur Road (24m)" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "22.5 m" },
+      { "x": 185, "y": 95, "val": "18.2 m" },
+      { "x": 98, "y": 165, "val": "22.1 m" },
+      { "x": 15, "y": 95, "val": "17.9 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Coimbatore",
+    "taluk": "Coimbatore North",
+    "village": "Peelamedu",
+    "survey": "189",
+    "subdiv": "3C",
+    "owner": "K. Venkatachalam",
+    "owner_tamil": "கே. வெங்கடாசலம்",
+    "door_no": "Door No. 78, Avinashi Road",
+    "street_address": "Door No. 78, Avinashi Road, Peelamedu, Coimbatore - 641004",
+    "patta": "3820",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site",
+    "area": "0 Hectares, 2.85 Ares (3,067 Sq.Ft / 7.04 Cents)",
+    "tax": "₹ 18.50",
+    "soil": "Black Cotton / Class II",
+    "coords": [
+      [11.0255, 77.0025],
+      [11.0257, 77.0028],
+      [11.0254, 77.0030],
+      [11.0252, 77.0027]
+    ],
+    "adjacent": { "N": "Survey 188", "S": "Survey 190", "E": "Survey 189/3D", "W": "Avinashi Road" },
+    "svgPath": "M 30,30 L 180,25 L 170,160 L 25,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "19.5 m" },
+      { "x": 175, "y": 92, "val": "16.8 m" },
+      { "x": 97, "y": 160, "val": "19.2 m" },
+      { "x": 25, "y": 92, "val": "16.5 m" }
+    ],
+    "vertices": [
+      { "x": 30, "y": 30, "lbl": "A" },
+      { "x": 180, "y": 25, "lbl": "B" },
+      { "x": 170, "y": 160, "lbl": "C" },
+      { "x": 25, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Madurai",
+    "taluk": "Madurai South",
+    "village": "South Gate Town",
+    "survey": "520",
+    "subdiv": "1A",
+    "owner": "T. Annamalai Chettiar",
+    "owner_tamil": "டி. அண்ணாமலை செட்டியார்",
+    "door_no": "Door No. 14, West Tower Street",
+    "street_address": "Door No. 14, West Tower Street, South Gate Town, Madurai - 625001",
+    "patta": "7190",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Traditional Heritage House Site",
+    "area": "0 Hectares, 3.20 Ares (3,444 Sq.Ft / 7.91 Cents)",
+    "tax": "₹ 21.00",
+    "soil": "Alluvial / Class I",
+    "coords": [
+      [9.9195, 78.1188],
+      [9.9197, 78.1191],
+      [9.9194, 78.1193],
+      [9.9192, 78.1190]
+    ],
+    "adjacent": { "N": "Survey 519", "S": "Survey 521", "E": "Survey 520/1B", "W": "West Tower Street (12m)" },
+    "svgPath": "M 20,40 L 180,20 L 190,160 L 30,180 Z",
+    "svgDims": [
+      { "x": 100, "y": 28, "val": "20.4 m" },
+      { "x": 185, "y": 90, "val": "17.6 m" },
+      { "x": 110, "y": 172, "val": "20.1 m" },
+      { "x": 25, "y": 110, "val": "17.2 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 40, "lbl": "A" },
+      { "x": 180, "y": 20, "lbl": "B" },
+      { "x": 190, "y": 160, "lbl": "C" },
+      { "x": 30, "y": 180, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Madurai",
+    "taluk": "Madurai North",
+    "village": "KK Nagar",
+    "survey": "310",
+    "subdiv": "4B",
+    "owner": "M. Jayaprakash",
+    "owner_tamil": "எம். ஜெயப்பிரகாஷ்",
+    "door_no": "Door No. 89, 80 Feet Road",
+    "street_address": "Door No. 89, 80 Feet Road, KK Nagar, Madurai - 625020",
+    "patta": "5640",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site (Grama Natham)",
+    "area": "0 Hectares, 2.50 Ares (2,691 Sq.Ft / 6.18 Cents)",
+    "tax": "₹ 15.00",
+    "soil": "Red Clay / Class II",
+    "coords": [
+      [9.9325, 78.1465],
+      [9.9327, 78.1468],
+      [9.9324, 78.1470],
+      [9.9322, 78.1467]
+    ],
+    "adjacent": { "N": "Survey 309", "S": "Survey 311", "E": "Survey 310/4C", "W": "80 Feet Main Road" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "17.2 m" },
+      { "x": 180, "y": 88, "val": "15.4 m" },
+      { "x": 98, "y": 158, "val": "16.9 m" },
+      { "x": 20, "y": 90, "val": "15.1 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Tiruchirappalli",
+    "taluk": "Srirangam",
+    "village": "Srirangam Town",
+    "survey": "615",
+    "subdiv": "2A",
+    "owner": "V. Bhuvaneshwari & V. Ramachandran",
+    "owner_tamil": "வி. புவனேஸ்வரி & வி. ராமச்சந்திரன்",
+    "door_no": "Door No. 32, North Chithirai Street",
+    "street_address": "Door No. 32, North Chithirai Street, Srirangam Town, Tiruchirappalli - 620006",
+    "patta": "9210",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Heritage Residential Site",
+    "area": "0 Hectares, 2.90 Ares (3,121 Sq.Ft / 7.16 Cents)",
+    "tax": "₹ 19.80",
+    "soil": "Cauvery Alluvial / Class I",
+    "coords": [
+      [10.8625, 78.6920],
+      [10.8627, 78.6923],
+      [10.8624, 78.6925],
+      [10.8622, 78.6922]
+    ],
+    "adjacent": { "N": "Survey 614", "S": "Survey 616", "E": "Survey 615/2B", "W": "North Chithirai Street" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "18.5 m" },
+      { "x": 185, "y": 92, "val": "16.2 m" },
+      { "x": 98, "y": 165, "val": "18.2 m" },
+      { "x": 15, "y": 95, "val": "15.9 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Tiruchirappalli",
+    "taluk": "Tiruchirappalli West",
+    "village": "Thillai Nagar",
+    "survey": "228",
+    "subdiv": "1C",
+    "owner": "S. Kalyanasundaram",
+    "owner_tamil": "எஸ். கல்யாணசுந்தரம்",
+    "door_no": "Door No. 18, 11th Cross",
+    "street_address": "Door No. 18, 11th Cross, Thillai Nagar, Tiruchirappalli - 620018",
+    "patta": "6745",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site",
+    "area": "0 Hectares, 3.40 Ares (3,660 Sq.Ft / 8.40 Cents)",
+    "tax": "₹ 22.00",
+    "soil": "Sandy Loam / Class II",
+    "coords": [
+      [10.8285, 78.6850],
+      [10.8287, 78.6853],
+      [10.8284, 78.6855],
+      [10.8282, 78.6852]
+    ],
+    "adjacent": { "N": "Survey 227", "S": "Survey 229", "E": "Survey 228/1D", "W": "11th Cross Road (15m)" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "20.1 m" },
+      { "x": 180, "y": 88, "val": "17.4 m" },
+      { "x": 98, "y": 158, "val": "19.8 m" },
+      { "x": 20, "y": 90, "val": "17.1 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Salem",
+    "taluk": "Salem",
+    "village": "Fairlands",
+    "survey": "145",
+    "subdiv": "3A",
+    "owner": "N. Balasubramaniam",
+    "owner_tamil": "என். பாலசுப்பிரமணியம்",
+    "door_no": "Door No. 56, Brindavan Road",
+    "street_address": "Door No. 56, Brindavan Road, Fairlands, Salem - 636016",
+    "patta": "8430",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site",
+    "area": "0 Hectares, 3.10 Ares (3,337 Sq.Ft / 7.66 Cents)",
+    "tax": "₹ 20.50",
+    "soil": "Red Gravel / Class II",
+    "coords": [
+      [11.6745, 78.1420],
+      [11.6747, 78.1423],
+      [11.6744, 78.1425],
+      [11.6742, 78.1422]
+    ],
+    "adjacent": { "N": "Survey 144", "S": "Survey 146", "E": "Survey 145/3B", "W": "Brindavan Road (18m)" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "19.2 m" },
+      { "x": 185, "y": 92, "val": "16.8 m" },
+      { "x": 98, "y": 165, "val": "18.9 m" },
+      { "x": 15, "y": 95, "val": "16.5 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Tirunelveli",
+    "taluk": "Palayamkottai",
+    "village": "Palayamkottai Town",
+    "survey": "732",
+    "subdiv": "1B",
+    "owner": "A. Rajendran",
+    "owner_tamil": "ஏ. ராஜேந்திரன்",
+    "door_no": "Door No. 24, South Car Street",
+    "street_address": "Door No. 24, South Car Street, Palayamkottai, Tirunelveli - 627002",
+    "patta": "5120",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site",
+    "area": "0 Hectares, 2.75 Ares (2,960 Sq.Ft / 6.79 Cents)",
+    "tax": "₹ 16.50",
+    "soil": "Thamirabarani Alluvial / Class I",
+    "coords": [
+      [8.7185, 77.7420],
+      [8.7187, 77.7423],
+      [8.7184, 77.7425],
+      [8.7182, 77.7422]
+    ],
+    "adjacent": { "N": "Survey 731", "S": "Survey 733", "E": "Survey 732/1C", "W": "South Car Street (15m)" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "18.1 m" },
+      { "x": 180, "y": 88, "val": "15.9 m" },
+      { "x": 98, "y": 158, "val": "17.8 m" },
+      { "x": 20, "y": 90, "val": "15.6 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Erode",
+    "taluk": "Erode",
+    "village": "Perundurai Road",
+    "survey": "290",
+    "subdiv": "4A",
+    "owner": "P. Vijayalakshmi",
+    "owner_tamil": "பி. விஜயலட்சுமி",
+    "door_no": "Door No. 102, Solar Junction",
+    "street_address": "Door No. 102, Solar Junction, Perundurai Road, Erode - 638011",
+    "patta": "7890",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Commercial & Residential",
+    "area": "0 Hectares, 3.60 Ares (3,875 Sq.Ft / 8.89 Cents)",
+    "tax": "₹ 23.50",
+    "soil": "Black Loam / Class I",
+    "coords": [
+      [11.3415, 77.7250],
+      [11.3417, 77.7253],
+      [11.3414, 77.7255],
+      [11.3412, 77.7252]
+    ],
+    "adjacent": { "N": "Survey 289", "S": "Survey 291", "E": "Survey 290/4B", "W": "Perundurai Main Road" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "21.4 m" },
+      { "x": 185, "y": 92, "val": "17.6 m" },
+      { "x": 98, "y": 165, "val": "21.0 m" },
+      { "x": 15, "y": 95, "val": "17.2 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Vellore",
+    "taluk": "Katpadi",
+    "village": "Katpadi Town",
+    "survey": "118",
+    "subdiv": "2B",
+    "owner": "G. Chandrasekaran",
+    "owner_tamil": "ஜி. சந்திரசேகரன்",
+    "door_no": "Door No. 37, VIT Main Road",
+    "street_address": "Door No. 37, VIT Main Road, Katpadi, Vellore - 632014",
+    "patta": "4910",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site",
+    "area": "0 Hectares, 2.65 Ares (2,852 Sq.Ft / 6.55 Cents)",
+    "tax": "₹ 16.00",
+    "soil": "Red Sandy Loam / Class II",
+    "coords": [
+      [12.9695, 79.1415],
+      [12.9697, 79.1418],
+      [12.9694, 79.1420],
+      [12.9692, 79.1417]
+    ],
+    "adjacent": { "N": "Survey 117", "S": "Survey 119", "E": "Survey 118/2C", "W": "Chittoor-Katpadi Highway" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "17.8 m" },
+      { "x": 180, "y": 88, "val": "15.4 m" },
+      { "x": 98, "y": 158, "val": "17.5 m" },
+      { "x": 20, "y": 90, "val": "15.1 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Thanjavur",
+    "taluk": "Thanjavur",
+    "village": "Medical College Area",
+    "survey": "440",
+    "subdiv": "1A",
+    "owner": "K. Swaminathan",
+    "owner_tamil": "கே. சுவாமிநாதன்",
+    "door_no": "Door No. 15, Medical College Road",
+    "street_address": "Door No. 15, Medical College Road, Thanjavur - 613004",
+    "patta": "6280",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Residential House Site",
+    "area": "0 Hectares, 3.05 Ares (3,283 Sq.Ft / 7.54 Cents)",
+    "tax": "₹ 19.00",
+    "soil": "Cauvery Delta Alluvial / Class I",
+    "coords": [
+      [10.7685, 79.1250],
+      [10.7687, 79.1253],
+      [10.7684, 79.1255],
+      [10.7682, 79.1252]
+    ],
+    "adjacent": { "N": "Survey 439", "S": "Survey 441", "E": "Survey 440/1B", "W": "Medical College Road" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "18.8 m" },
+      { "x": 185, "y": 92, "val": "16.4 m" },
+      { "x": 98, "y": 165, "val": "18.5 m" },
+      { "x": 15, "y": 95, "val": "16.1 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Kanyakumari",
+    "taluk": "Agastheeswaram",
+    "village": "Nagercoil Town",
+    "survey": "505",
+    "subdiv": "3B",
+    "owner": "J. Mariappan",
+    "owner_tamil": "ஜே. மாரியப்பன்",
+    "door_no": "Door No. 22, Cape Road",
+    "street_address": "Door No. 22, Cape Road, Kottar, Nagercoil, Kanyakumari - 629002",
+    "patta": "9150",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Coastal Residential Site",
+    "area": "0 Hectares, 2.95 Ares (3,175 Sq.Ft / 7.29 Cents)",
+    "tax": "₹ 18.20",
+    "soil": "Coastal Alluvium / Class I",
+    "coords": [
+      [8.1785, 77.4320],
+      [8.1787, 77.4323],
+      [8.1784, 77.4325],
+      [8.1782, 77.4322]
+    ],
+    "adjacent": { "N": "Survey 504", "S": "Survey 506", "E": "Survey 505/3C", "W": "Cape Road (20m)" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "18.2 m" },
+      { "x": 180, "y": 88, "val": "16.0 m" },
+      { "x": 98, "y": 158, "val": "17.9 m" },
+      { "x": 20, "y": 90, "val": "15.7 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Krishnagiri",
+    "taluk": "Hosur",
+    "village": "Hosur Town",
+    "survey": "215",
+    "subdiv": "1D",
+    "owner": "R. Loganathan",
+    "owner_tamil": "ஆர். லோகநாதன்",
+    "door_no": "Door No. 64, Bagalur Road",
+    "street_address": "Door No. 64, Bagalur Road, Hosur - 635109",
+    "patta": "7340",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Industrial & Residential Zone",
+    "area": "0 Hectares, 4.20 Ares (4,520 Sq.Ft / 10.38 Cents)",
+    "tax": "₹ 28.00",
+    "soil": "Red Sandy / Class II",
+    "coords": [
+      [12.7385, 77.8280],
+      [12.7387, 77.8283],
+      [12.7384, 77.8285],
+      [12.7382, 77.8282]
+    ],
+    "adjacent": { "N": "Survey 214", "S": "Survey 216", "E": "Survey 215/1E", "W": "Bagalur Road (24m)" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "23.4 m" },
+      { "x": 185, "y": 92, "val": "19.1 m" },
+      { "x": 98, "y": 165, "val": "23.0 m" },
+      { "x": 15, "y": 95, "val": "18.7 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "The Nilgiris",
+    "taluk": "Udhagamandalam",
+    "village": "Ooty Town",
+    "survey": "104",
+    "subdiv": "2A",
+    "owner": "C. Prabhakaran",
+    "owner_tamil": "சி. பிரபாகரன்",
+    "door_no": "Door No. 8, Commercial Road",
+    "street_address": "Door No. 8, Commercial Road, Udhagamandalam (Ooty) - 643001",
+    "patta": "3690",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Hill Station Eco-Residential Site",
+    "area": "0 Hectares, 3.80 Ares (4,090 Sq.Ft / 9.39 Cents)",
+    "tax": "₹ 25.00",
+    "soil": "Mountain Humus / Class I",
+    "coords": [
+      [11.4115, 76.7020],
+      [11.4117, 76.7023],
+      [11.4114, 76.7025],
+      [11.4112, 76.7022]
+    ],
+    "adjacent": { "N": "Survey 103", "S": "Survey 105", "E": "Survey 104/2B", "W": "Commercial Road" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "21.8 m" },
+      { "x": 180, "y": 88, "val": "18.2 m" },
+      { "x": 98, "y": 158, "val": "21.5 m" },
+      { "x": 20, "y": 90, "val": "17.9 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Tiruppur",
+    "taluk": "Tiruppur",
+    "village": "Avinashi Road Town",
+    "survey": "388",
+    "subdiv": "2C",
+    "owner": "M. Kumarasamy",
+    "owner_tamil": "எம். குமாரசாமி",
+    "door_no": "Door No. 91, Kumaran Road",
+    "street_address": "Door No. 91, Kumaran Road, Tiruppur - 641601",
+    "patta": "8120",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Textile Commercial & House Site",
+    "area": "0 Hectares, 3.50 Ares (3,767 Sq.Ft / 8.65 Cents)",
+    "tax": "₹ 22.50",
+    "soil": "Red Sandy / Class II",
+    "coords": [
+      [11.1085, 77.3420],
+      [11.1087, 77.3423],
+      [11.1084, 77.3425],
+      [11.1082, 77.3422]
+    ],
+    "adjacent": { "N": "Survey 387", "S": "Survey 389", "E": "Survey 388/2D", "W": "Kumaran Road (18m)" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "20.5 m" },
+      { "x": 185, "y": 92, "val": "17.8 m" },
+      { "x": 98, "y": 165, "val": "20.1 m" },
+      { "x": 15, "y": 95, "val": "17.4 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Kanchipuram",
+    "taluk": "Kanchipuram",
+    "village": "Enathur Village",
+    "survey": "174",
+    "subdiv": "1A",
+    "owner": "T. Sundaramurthy",
+    "owner_tamil": "டி. சுந்தரமூர்த்தி",
+    "door_no": "Door No. 19, Gandhi Road",
+    "street_address": "Door No. 19, Gandhi Road, Enathur, Kanchipuram - 631561",
+    "patta": "4590",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Silk Weaver House Site",
+    "area": "0 Hectares, 2.70 Ares (2,906 Sq.Ft / 6.67 Cents)",
+    "tax": "₹ 17.00",
+    "soil": "Clayey Loam / Class II",
+    "coords": [
+      [12.8425, 79.7150],
+      [12.8427, 79.7153],
+      [12.8424, 79.7155],
+      [12.8422, 79.7152]
+    ],
+    "adjacent": { "N": "Survey 173", "S": "Survey 175", "E": "Survey 174/1B", "W": "Gandhi Road (12m)" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "17.6 m" },
+      { "x": 180, "y": 88, "val": "15.8 m" },
+      { "x": 98, "y": 158, "val": "17.3 m" },
+      { "x": 20, "y": 90, "val": "15.4 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Cuddalore",
+    "taluk": "Chidambaram",
+    "village": "Chidambaram Town",
+    "survey": "612",
+    "subdiv": "3B",
+    "owner": "M. Natarajan",
+    "owner_tamil": "எம். நடராஜன்",
+    "door_no": "Door No. 41, East Car Street",
+    "street_address": "Door No. 41, East Car Street, Chidambaram - 608001",
+    "patta": "9340",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Temple Town House Site",
+    "area": "0 Hectares, 2.80 Ares (3,013 Sq.Ft / 6.92 Cents)",
+    "tax": "₹ 18.00",
+    "soil": "Coastal Alluvium / Class I",
+    "coords": [
+      [11.3985, 79.6950],
+      [11.3987, 79.6953],
+      [11.3984, 79.6955],
+      [11.3982, 79.6952]
+    ],
+    "adjacent": { "N": "Survey 611", "S": "Survey 613", "E": "Survey 612/3C", "W": "East Car Street" },
+    "svgPath": "M 20,30 L 190,20 L 180,165 L 15,160 Z",
+    "svgDims": [
+      { "x": 105, "y": 25, "val": "18.4 m" },
+      { "x": 185, "y": 92, "val": "16.1 m" },
+      { "x": 98, "y": 165, "val": "18.1 m" },
+      { "x": 15, "y": 95, "val": "15.8 m" }
+    ],
+    "vertices": [
+      { "x": 20, "y": 30, "lbl": "A" },
+      { "x": 190, "y": 20, "lbl": "B" },
+      { "x": 180, "y": 165, "lbl": "C" },
+      { "x": 15, "y": 160, "lbl": "D" }
+    ]
+  },
+  {
+    "district": "Ramanathapuram",
+    "taluk": "Rameswaram",
+    "village": "Rameswaram Town",
+    "survey": "128",
+    "subdiv": "2A",
+    "owner": "S. Murugesan",
+    "owner_tamil": "எஸ். முருகேசன்",
+    "door_no": "Door No. 12, Agni Theertham Road",
+    "street_address": "Door No. 12, Agni Theertham Road, Rameswaram - 623526",
+    "patta": "5670",
+    "category": "Private (Ryotwari)",
+    "type": "மனை / Island Heritage House Site",
+    "area": "0 Hectares, 2.50 Ares (2,691 Sq.Ft / 6.18 Cents)",
+    "tax": "₹ 16.00",
+    "soil": "Marine Sand / Class III",
+    "coords": [
+      [9.2885, 79.3140],
+      [9.2887, 79.3143],
+      [9.2884, 79.3145],
+      [9.2882, 79.3142]
+    ],
+    "adjacent": { "N": "Survey 127", "S": "Survey 129", "E": "Survey 128/2B", "W": "Agni Theertham Way" },
+    "svgPath": "M 25,25 L 185,20 L 175,155 L 20,155 Z",
+    "svgDims": [
+      { "x": 105, "y": 20, "val": "17.0 m" },
+      { "x": 180, "y": 88, "val": "15.1 m" },
+      { "x": 98, "y": 158, "val": "16.8 m" },
+      { "x": 20, "y": 90, "val": "14.9 m" }
+    ],
+    "vertices": [
+      { "x": 25, "y": 25, "lbl": "A" },
+      { "x": 185, "y": 20, "lbl": "B" },
+      { "x": 175, "y": 155, "lbl": "C" },
+      { "x": 20, "y": 155, "lbl": "D" }
+    ]
+  }
+]

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil Nadu GIS - Cadastral GI Explorer</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Custom GI Viewer Stylesheet -->
+  <link rel="stylesheet" href="viewer-style.css?v=7">
+</head>
+<body class="gi-viewer-body">
+
+  <div class="gi-app-layout">
+    
+    <!-- Left Sidebar: Filter Panel (Clean White & Blue) -->
+    <aside class="gi-sidebar gi-filter-sidebar" id="filter-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="logo-icon">🗺️</span>
+          <div>
+            <h3>Tamil Nadu GIS</h3>
+            <span class="subtitle">Cadastral GI Explorer</span>
+          </div>
+        </div>
+        <button class="btn-icon toggle-sidebar" data-target="filter-sidebar" title="Toggle Sidebar">✕</button>
+      </div>
+
+      <div class="sidebar-content">
+        <!-- Search Filters Form -->
+        <form id="gis-search-form" class="gis-form">
+          <div class="form-group autocomplete-container">
+            <label for="district-select">DISTRICT <span class="required">*</span></label>
+            <div class="autocomplete-wrapper">
+              <input type="text" id="district-select" placeholder="Type or select District..." autocomplete="off" required />
+              <div class="autocomplete-dropdown" id="district-dropdown"></div>
+            </div>
+          </div>
+
+          <div class="form-group autocomplete-container">
+            <label for="taluk-select">TALUK <span class="required">*</span></label>
+            <div class="autocomplete-wrapper">
+              <input type="text" id="taluk-select" placeholder="Type or select Taluk..." autocomplete="off" disabled required />
+              <div class="autocomplete-dropdown" id="taluk-dropdown"></div>
+            </div>
+          </div>
+
+          <div class="form-group autocomplete-container">
+            <label for="village-select">VILLAGE <span class="required">*</span></label>
+            <div class="autocomplete-wrapper">
+              <input type="text" id="village-select" placeholder="Type or select Village..." autocomplete="off" disabled required />
+              <div class="autocomplete-dropdown" id="village-dropdown"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-6 autocomplete-container">
+              <label for="survey-select">SURVEY NO <span class="required">*</span></label>
+              <div class="autocomplete-wrapper">
+                <input type="text" id="survey-select" placeholder="Select..." autocomplete="off" disabled required />
+                <div class="autocomplete-dropdown" id="survey-dropdown"></div>
+              </div>
+            </div>
+            <div class="form-group col-6 autocomplete-container">
+              <label for="subdiv-select">SUB-DIVISION</label>
+              <div class="autocomplete-wrapper">
+                <input type="text" id="subdiv-select" placeholder="All" autocomplete="off" disabled />
+                <div class="autocomplete-dropdown" id="subdiv-dropdown"></div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-search" id="btn-search-land">
+            <span class="search-icon">🔍</span> Search Land Records
+          </button>
+          
+          <button type="button" class="btn-secondary" id="btn-reset-filters">
+            Reset Filters
+          </button>
+        </form>
+
+        <!-- Land Use Metrics Widget -->
+        <div class="gis-widget">
+          <h4>LAND USE METRICS (TN-GOV)</h4>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <span class="value">94.8%</span>
+              <span class="label">MAPPED PATTA</span>
+            </div>
+            <div class="metric-card">
+              <span class="value">3.1M+</span>
+              <span class="label">TOTAL PARCELS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Human-in-the-Loop (HITL) Workflow Panel -->
+        <div class="hitl-sidebar-card">
+          <div class="hitl-card-header">
+            <span class="hitl-badge">HITL ARCHITECTURE</span>
+            <span class="hitl-sub">Human-in-the-Loop Pipeline</span>
+          </div>
+          <p class="hitl-desc">Automated workflow pauses at security challenges (OTP / CAPTCHA) & high-risk boundaries for human intervention.</p>
+          <div class="hitl-action-buttons">
+            <button type="button" class="btn-hitl-trigger" id="btn-trigger-hitl-auth">
+              ⚡ Trigger HITL Session Delegation
+            </button>
+            <button type="button" class="btn-hitl-secondary" id="btn-view-audit-trail">
+              📋 Immutable Audit Trail
+            </button>
+          </div>
+        </div>
+
+        <!-- Reference Notice Card -->
+        <div class="disclaimer-text">
+          <p>⚠️ <strong>Reference Only:</strong> Boundaries and sketches rendered are derived from digital cadastral registries. For official verification, refer to registered property documentation.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Center: Interactive Map Container -->
+    <main class="gi-map-viewport">
+      
+      <!-- Top Action Floating HUD -->
+      <header class="map-hud-header">
+        <div class="hud-left">
+          <button class="btn-hud toggle-sidebar-trigger" id="trigger-filter">
+            ☰ Filter Land
+          </button>
+
+          <button class="btn-hud btn-locate-me" id="btn-locate-user" title="Locate My Current GPS Position">
+            <span class="pulse-icon">📍</span> My Location
+          </button>
+
+          <button class="btn-hud btn-mpa-toggle active" id="btn-toggle-mpa" title="Toggle Master Plan Areas (MPA) Layer">
+            🌐 MPA Zones
+          </button>
+
+          <!-- Direct Quick Services Button (Navigates directly to synchronized Tools Directory) -->
+          <button class="btn-hud btn-quick-services-pill" id="btn-quick-services" title="Open PlotCheck Property Due Diligence & Legal Suite">
+            ⚡ Quick Services
+          </button>
+        </div>
+
+        <div class="hud-center">
+          <div class="hud-search-status" id="search-status-bar">
+            <span class="status-indicator success"></span>
+            <span class="status-text" id="status-text-display">Tamil Nadu Cadastral Land Registry</span>
+          </div>
+        </div>
+        
+        <div class="hud-right">
+          <div class="lang-toggle-group" id="lang-toggle-group" title="Switch Language / மொழியை மாற்றவும்">
+            <button class="btn-lang active" id="btn-lang-ta" data-lang="ta">தமிழ்</button>
+            <button class="btn-lang" id="btn-lang-en" data-lang="en">English</button>
+          </div>
+
+          <div class="map-layer-selector">
+            <button class="btn-hud active" id="layer-streets">🗺️ Streets & Buildings</button>
+            <button class="btn-hud" id="layer-satellite">🛰️ Satellite</button>
+            <button class="btn-hud" id="layer-dark">🌙 Dark</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Leaflet Map Element -->
+      <div id="map" class="map-frame"></div>
+
+      <!-- Measurement HUD Overlay -->
+      <div class="measurement-hud" id="measurement-hud" style="display: none;">
+        <div class="hud-title">
+          <span>📏 Map Measurement Tool</span>
+          <button class="btn-close-hud" id="btn-close-measurer">✕</button>
+        </div>
+        <div class="hud-body">
+          <div class="measure-row">
+            <span class="lbl">Segment Distance:</span>
+            <span class="val" id="measure-segment">0.00 m</span>
+          </div>
+          <div class="measure-row">
+            <span class="lbl">Total Distance:</span>
+            <span class="val" id="measure-total-dist">0.00 m</span>
+          </div>
+          <div class="measure-row">
+            <span class="lbl">Enclosed Area:</span>
+            <span class="val" id="measure-area">0.00 m²</span>
+          </div>
+          <p class="hud-hint">Click on map to add points, double-click to finish measuring.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Map Controls & Coordinates -->
+      <footer class="map-hud-footer">
+        <div class="coordinates-hud">
+          <span class="coord-label">GPS Coordinate:</span>
+          <span class="coord-val font-mono" id="coords-display">13.02235° N, 80.23719° E</span>
+        </div>
+        <div class="quick-tools">
+          <button class="btn-quick-tool" id="btn-tool-locate" title="GPS Locate Me">📍 GPS Locate</button>
+          <button class="btn-quick-tool" id="btn-tool-measure" title="Measure Distance & Area">📏 Measure</button>
+          <button class="btn-quick-tool" id="btn-tool-clear" title="Clear Shapes & Paths">🧹 Clear Map</button>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Right Sidebar: Records & FMB Sketch Panel (Clean White & Blue) -->
+    <aside class="gi-sidebar gi-records-sidebar" id="records-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="logo-icon">📜</span>
+          <div>
+            <h3>Land Records Extract</h3>
+            <span class="subtitle" id="record-summary-title">Survey No: 358 / 1B</span>
+          </div>
+        </div>
+        <button class="btn-icon toggle-sidebar" data-target="records-sidebar" title="Toggle Records">✕</button>
+      </div>
+
+      <div class="sidebar-content">
+        
+        <!-- Toggle Tabs: A-Register / FMB Sketch / MPA Zoning -->
+        <div class="sidebar-tabs">
+          <button class="tab-btn active" data-tab="tab-aregister">A-Register</button>
+          <button class="tab-btn" data-tab="tab-fmb">FMB Sketch</button>
+          <button class="tab-btn" data-tab="tab-mpa">MPA Zoning</button>
+        </div>
+
+        <!-- A-Register / Location Details Tab Content -->
+        <div class="tab-pane active" id="tab-aregister">
+          <div class="details-placeholder" id="aregister-placeholder" style="display: none;">
+            <div class="placeholder-icon">🏠</div>
+            <h4>Select a Building or Land Parcel</h4>
+            <p>Click directly on any building, house, or land parcel on the map to view its location details and look up official records.</p>
+          </div>
+          
+          <div class="details-content" id="aregister-content" style="display: block;">
+            
+            <!-- Location Details Card (always shown on click) -->
+            <div class="patta-summary-card" id="location-details-card">
+              <div class="patta-badge" id="record-source-badge" style="background: #0f766e;">📍 LOCATION DETAILS</div>
+              <h3 id="patta-owner-name" style="font-size: 15px; color: #334155;">Click a building to see details</h3>
+              
+              <div class="patta-row">
+                <span class="label">GPS:</span>
+                <span class="value font-mono" id="location-gps">—</span>
+              </div>
+              <div class="patta-row">
+                <span class="label">Building Area:</span>
+                <span class="value font-bold" id="location-area">—</span>
+              </div>
+            </div>
+
+            <!-- Location Table (reverse geocoded public data) -->
+            <div class="extract-section">
+              <h4>LOCATION DETAILS</h4>
+              <table class="extract-table">
+                <tbody>
+                  <tr>
+                    <th>District</th>
+                    <td id="table-district">—</td>
+                  </tr>
+                  <tr>
+                    <th>Taluk</th>
+                    <td id="table-taluk">—</td>
+                  </tr>
+                  <tr>
+                    <th>Village / Town</th>
+                    <td id="table-village">—</td>
+                  </tr>
+                  <tr>
+                    <th>Road / Street</th>
+                    <td id="table-road">—</td>
+                  </tr>
+                  <tr>
+                    <th>Building Area</th>
+                    <td id="table-extent" class="font-bold">—</td>
+                  </tr>
+                  <tr>
+                    <th>PIN Code</th>
+                    <td id="table-postcode">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Patta / Chitta Cadastral Details (Government API & Editable) -->
+            <div class="extract-section" id="user-patta-section">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h4 style="margin: 0;">📋 PATTA / CADASTRAL RECORD</h4>
+                <button class="btn-toggle-form" id="btn-toggle-record-form" type="button" style="padding: 3px 8px; font-size: 11px; margin: 0; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; border-radius: 4px; cursor: pointer;">
+                  ✏️ Edit / Correct Details
+                </button>
+              </div>
+              <table class="extract-table">
+                <tbody>
+                  <tr>
+                    <th>Owner (Pattadhar)</th>
+                    <td id="user-patta-owner" class="font-bold">Govt Registry / Verified Owner</td>
+                  </tr>
+                  <tr>
+                    <th>Patta Number</th>
+                    <td id="user-patta-no" class="font-mono font-bold">4521</td>
+                  </tr>
+                  <tr>
+                    <th>Survey / Subdiv</th>
+                    <td id="table-survey" class="font-mono font-bold">142 / 3B</td>
+                  </tr>
+                  <tr>
+                    <th>Land Category</th>
+                    <td id="land-category">Private (Ryotwari)</td>
+                  </tr>
+                  <tr>
+                    <th>Land Classification</th>
+                    <td id="land-type" class="highlight-blue">Residential (Grama Natham)</td>
+                  </tr>
+                  <tr>
+                    <th>Annual Assessment</th>
+                    <td id="table-assessment">₹ 18.50</td>
+                  </tr>
+                  <tr>
+                    <th>Soil / Class</th>
+                    <td id="table-soil">Sandy Loam (Class I)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Enter / Edit Record Form -->
+            <div class="extract-section" id="enter-record-section">
+              <div class="user-record-form" id="user-record-form" style="display: none; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px;">
+                <p style="font-size: 11px; color: #475569; margin: 0 0 8px; font-weight: 600;">✏️ Edit or Fill Missing Land Details</p>
+                <div class="form-group-sm">
+                  <label>Owner Name</label>
+                  <input type="text" id="input-owner" placeholder="e.g. R. Soundararajan" />
+                </div>
+                <div class="form-group-sm">
+                  <label>Owner Name (Tamil)</label>
+                  <input type="text" id="input-owner-tamil" placeholder="e.g. ஆர். சௌந்தரராஜன்" />
+                </div>
+                <div class="form-row-sm">
+                  <div class="form-group-sm">
+                    <label>Patta No</label>
+                    <input type="text" id="input-patta" placeholder="e.g. 4521" />
+                  </div>
+                  <div class="form-group-sm">
+                    <label>Survey No</label>
+                    <input type="text" id="input-survey" placeholder="e.g. 358" />
+                  </div>
+                  <div class="form-group-sm">
+                    <label>Subdivision</label>
+                    <input type="text" id="input-subdiv" placeholder="e.g. 1B" />
+                  </div>
+                </div>
+                <div class="form-group-sm">
+                  <label>Land Category</label>
+                  <select id="input-category">
+                    <option value="">— Select —</option>
+                    <option value="Private (Ryotwari)">Private (Ryotwari)</option>
+                    <option value="Government (Poramboke)">Government (Poramboke)</option>
+                    <option value="Trust / Institutional">Trust / Institutional</option>
+                    <option value="Inam / Endowment">Inam / Endowment</option>
+                  </select>
+                </div>
+                <div class="form-group-sm">
+                  <label>Land Type</label>
+                  <select id="input-type">
+                    <option value="">— Select —</option>
+                    <option value="Residential (Grama Natham)">Residential (Grama Natham)</option>
+                    <option value="Ryotwari Nanjai (Wet Land)">Ryotwari Nanjai (Wet Land)</option>
+                    <option value="Ryotwari Punjai (Dry Land)">Ryotwari Punjai (Dry Land)</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Industrial">Industrial</option>
+                  </select>
+                </div>
+                <div class="form-row-sm">
+                  <div class="form-group-sm">
+                    <label>Tax (Annual)</label>
+                    <input type="text" id="input-tax" placeholder="e.g. ₹ 15.50" />
+                  </div>
+                  <div class="form-group-sm">
+                    <label>Soil Class</label>
+                    <input type="text" id="input-soil" placeholder="e.g. Sandy Loam" />
+                  </div>
+                </div>
+                <button class="btn-save-record" id="btn-save-user-record" type="button">
+                  💾 Save My Record
+                </button>
+                <p class="form-disclaimer">⚠️ Only enter data you have legal rights to (your own property, client data with consent, or licensed datasets).</p>
+              </div>
+            </div>
+
+            <!-- Adjacencies (geometric — kept, this is computed from building location) -->
+            <div class="adjacency-widget" id="adjacency-section" style="display: none;">
+              <h4>ADJACENT FEATURES</h4>
+              <div class="boundary-grid">
+                <div class="bound-card north">
+                  <span class="dir">N</span>
+                  <span class="val" id="boundary-n">—</span>
+                </div>
+                <div class="boundary-row-middle">
+                  <div class="bound-card west">
+                    <span class="dir">W</span>
+                    <span class="val" id="boundary-w">—</span>
+                  </div>
+                  <div class="bound-center">🏠</div>
+                  <div class="bound-card east">
+                    <span class="dir">E</span>
+                    <span class="val" id="boundary-e">—</span>
+                  </div>
+                </div>
+                <div class="bound-card south">
+                  <span class="dir">S</span>
+                  <span class="val" id="boundary-s">—</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FMB Sketch Tab Content -->
+        <div class="tab-pane" id="tab-fmb">
+          <div class="details-placeholder" id="fmb-placeholder" style="display: none;">
+            <div class="placeholder-icon">📐</div>
+            <h4>Field Measurement Book (FMB)</h4>
+            <p>Click on any house or parcel on the map to generate the vector subdivision sketch with side measurements.</p>
+          </div>
+
+          <div class="details-content" id="fmb-content" style="display: block;">
+            <div class="fmb-sketch-box">
+              <svg id="fmb-svg" viewBox="-20 -20 240 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dynamic SVG Lines -->
+              </svg>
+            </div>
+            
+            <div class="fmb-details">
+              <div class="fmb-legend">
+                <span class="legend-item"><span class="legend-color boundary"></span> Parcel / House Boundary</span>
+                <span class="legend-item"><span class="legend-color subdiv"></span> Subdivision Line</span>
+                <span class="legend-item"><span class="legend-color text"></span> Side Dimensions (Meters)</span>
+              </div>
+              
+              <div class="fmb-actions">
+                <button class="btn-action" id="btn-export-fmb">📥 Export Sketch (SVG)</button>
+                <button class="btn-action" id="btn-print-fmb">🖨️ Print FMB Sketch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MPA Zoning Tab Content -->
+        <div class="tab-pane" id="tab-mpa">
+          <div class="mpa-details-card">
+            <div class="mpa-header-status">
+              <span class="mpa-badge-status verified" id="mpa-status-badge">Master Plan Verified</span>
+            </div>
+            <h3 id="mpa-zone-title">CMDA Metropolitan Planning Area</h3>
+            
+            <div class="mpa-detail-row">
+              <span class="lbl">Planning Authority:</span>
+              <span class="val" id="mpa-authority">Chennai Metropolitan Development Authority (CMDA)</span>
+            </div>
+            <div class="mpa-detail-row">
+              <span class="lbl">Master Plan Zoning:</span>
+              <span class="val highlight-blue" id="mpa-zone-type">Mixed Residential (R2)</span>
+            </div>
+            <div class="mpa-detail-row">
+              <span class="lbl">Permissible FSI / FAR:</span>
+              <span class="val font-bold" id="mpa-fsi">2.0 - 2.5 (Premium FSI up to 3.25)</span>
+            </div>
+            <div class="mpa-detail-row">
+              <span class="lbl">Applicable Rules:</span>
+              <span class="val" id="mpa-regulations">Tamil Nadu Combined Development and Building Rules (TNCDBR 2019).</span>
+            </div>
+
+            <div class="mpa-alert-box">
+              ℹ️ Master Plan Area (MPA) determines statutory land use, setback requirements, road-width multipliers, and building height clearances under DTCP & CMDA guidelines.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HUMAN-IN-THE-LOOP (HITL) MODAL OVERLAYS (FULL IMPLEMENTATION OF SPEC)    -->
+  <!-- ========================================================================= -->
+
+  <!-- 1. HITL Interruption Gate Modal (Authentication & Session Delegation) -->
+  <div id="hitl-interruption-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card hitl-modal-large">
+      <div class="modal-header">
+        <div class="hitl-header-title">
+          <span class="hitl-gate-icon">🤖</span>
+          <div>
+            <h3>Security Verification (Human vs. Computer)</h3>
+            <span class="subtitle">Enter the visual security code to retrieve live government cadastral records</span>
+          </div>
+        </div>
+        <button class="btn-close-modal" onclick="closeHitlModal()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Visual System Architecture Pipeline Diagram from User Specification -->
+        <div class="hitl-pipeline-diagram">
+          <div class="pipeline-node active" id="pipe-node-1">
+            <span class="node-icon">⚙️</span>
+            <span class="node-title">1. Backend</span>
+            <span class="node-sub">Triggers Action</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node active" id="pipe-node-2">
+            <span class="node-icon">🏛️</span>
+            <span class="node-title">2. Target Portal</span>
+            <span class="node-sub">eservices.tn.gov.in</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node paused active" id="pipe-node-3">
+            <span class="node-icon">⏸️</span>
+            <span class="node-title">3. Interruption Gate</span>
+            <span class="node-sub">Paused (2-Min TTL)</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node human" id="pipe-node-4">
+            <span class="node-icon">👤</span>
+            <span class="node-title">4. Human User</span>
+            <span class="node-sub">Enters Code</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node next" id="pipe-node-5">
+            <span class="node-icon">✅</span>
+            <span class="node-title">5. Resume</span>
+            <span class="node-sub">Returns Data</span>
+          </div>
+        </div>
+
+        <!-- Session Custody Principles Banner -->
+        <div class="hitl-custody-card">
+          <div class="custody-header">
+            <span>🔒</span>
+            <strong>Session Custody vs. Credential Custody:</strong>
+          </div>
+          <p>The application never stores passwords or intercepts SMS gateways. The end-user delegates temporary session authority by providing their own OTP.</p>
+        </div>
+
+        <!-- Session Timeout Countdown Window (2 Minutes) -->
+        <div class="hitl-timeout-meter">
+          <div class="meter-info">
+            <span class="ttl-label" id="hitl-timer-label">⏱️ Session Window Timeout:</span>
+            <span class="ttl-value font-mono" id="hitl-timer-countdown">02:00</span>
+          </div>
+          <div class="meter-progress-track">
+            <div class="meter-progress-bar" id="hitl-timer-bar" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <!-- Cooldown Lockout Warning Alert (When code is wrong) -->
+        <div id="hitl-cooldown-alert" class="hitl-alert-warning" style="display: none; background: #fef2f2; border-color: #fecaca; color: #991b1b;">
+          <strong>❌ Security Code Incorrect:</strong> Verification cooldown locked. Please wait for the 2-minute timer to finish. A new security challenge will then appear.
+        </div>
+
+        <!-- Visual CAPTCHA / Challenge Input Form -->
+        <div class="hitl-form-box" id="hitl-form-container">
+          <label for="hitl-otp-input" id="hitl-form-label">ENTER THE 6-CHARACTER SECURITY CODE BELOW</label>
+          <div class="captcha-visual-display" style="margin-bottom: 12px; text-align: center;">
+            <img id="hitl-captcha-img" src="" alt="Security CAPTCHA Challenge" style="height: 65px; border: 1.5px solid #cbd5e1; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-block;" />
+          </div>
+          <div class="otp-input-wrapper">
+            <input type="text" id="hitl-otp-input" maxlength="6" placeholder="Type characters..." autocomplete="off" autofocus style="text-align: center; font-family: monospace; font-size: 22px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase;" />
+          </div>
+          <p class="otp-hint-text" id="hitl-otp-hint">Read the distorted security code in the image above and enter it here.</p>
+        </div>
+
+        <div class="hitl-status-message" id="hitl-status-message" style="display: none;"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeHitlModal()">Cancel / Close</button>
+        <button class="btn-modal-ok btn-hitl-primary" id="btn-submit-hitl-otp">
+          ⚡ Verify Code & Fetch Live Government Records ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. HITL Runtime Approval Gate Modal (High-Risk Operations) -->
+  <div id="hitl-approval-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card hitl-modal-large">
+      <div class="modal-header">
+        <div class="hitl-header-title">
+          <span class="hitl-gate-icon">🛡️</span>
+          <div>
+            <h3>HITL Runtime Approval Gate</h3>
+            <span class="subtitle">High-Risk Operation Legal & Financial Safeguard</span>
+          </div>
+        </div>
+        <button class="btn-close-modal" onclick="closeHitlApprovalModal()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="hitl-alert-warning">
+          ⚠️ <strong>High-Risk Boundary Reached:</strong> This action involves formal legal property mutation. AI automated execution is paused until authorized by a human supervisor.
+        </div>
+
+        <div class="approval-diff-box">
+          <h4>PROPOSED REGISTRY MUTATION DIFF</h4>
+          <table class="extract-table">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Current State (Before)</th>
+                <th>Proposed State (After Mutation)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Owner Name</strong></td>
+                <td>A. Murugan</td>
+                <td class="diff-highlight-add">A. Murugan &amp; M. Soundariya (Joint)</td>
+              </tr>
+              <tr>
+                <td><strong>Land Classification</strong></td>
+                <td>Ryotwari Nanjai (Wet Land)</td>
+                <td class="diff-highlight-add">Residential House Site (Converted)</td>
+              </tr>
+              <tr>
+                <td><strong>Permissible FSI</strong></td>
+                <td>1.5</td>
+                <td class="diff-highlight-add">2.5 (CMDA Mixed Residential Approved)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label for="hitl-approval-notes">SUPERVISOR APPROVAL COMMENTS / LEGAL REF NO:</label>
+          <input type="text" id="hitl-approval-notes" placeholder="e.g., Authorized per G.O. Ms No. 412/2026..." value="Authorized per G.O. Ms No. 412/2026 - Human Verification Completed." />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-secondary" style="color: #ef4444;" onclick="handleApprovalDecision(false)">✕ Reject Mutation</button>
+        <button class="btn-modal-ok btn-hitl-primary" style="background: #10b981;" onclick="handleApprovalDecision(true)">
+          ✓ Approve &amp; Execute Mutation
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. HITL Active Learning Feedback Modal (Continuous Heuristics Improvement) -->
+  <div id="hitl-feedback-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card">
+      <div class="modal-header">
+        <div class="hitl-header-title">
+          <span>✏️</span>
+          <div>
+            <h3>Active Learning Feedback</h3>
+            <span class="subtitle">Human corrections flow back to improve automated models</span>
+          </div>
+        </div>
+        <button class="btn-close-modal" onclick="closeHitlFeedbackModal()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 12.5px; color: var(--color-text-body); margin-bottom: 12px;">
+          Submit verified ground-truth field corrections. The HITL engine incorporates these corrections into future spatial resolution passes.
+        </p>
+        
+        <div class="form-group">
+          <label for="feedback-owner-name">CORRECTED OWNER NAME</label>
+          <input type="text" id="feedback-owner-name" value="A. Murugan" />
+        </div>
+
+        <div class="form-group" style="margin-top: 10px;">
+          <label for="feedback-door-no">CORRECTED DOOR / HOUSE NO</label>
+          <input type="text" id="feedback-door-no" value="No. 42" />
+        </div>
+
+        <div class="form-group" style="margin-top: 10px;">
+          <label for="feedback-notes">GROUND-TRUTH VERIFICATION NOTES</label>
+          <input type="text" id="feedback-notes" placeholder="e.g., Physical field boundary verified against registered sale deed." />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeHitlFeedbackModal()">Cancel</button>
+        <button class="btn-modal-ok btn-hitl-primary" id="btn-submit-feedback-correction">
+          ✓ Submit to Active Learning Pipeline
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. HITL Immutable Audit Trail Modal -->
+  <div id="hitl-audit-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card hitl-modal-large">
+      <div class="modal-header">
+        <div class="hitl-header-title">
+          <span>📋</span>
+          <div>
+            <h3>HITL Immutable Audit Trail</h3>
+            <span class="subtitle">Detailed tracking of who authorized each paused step and when</span>
+          </div>
+        </div>
+        <button class="btn-close-modal" onclick="closeHitlAuditModal()">✕</button>
+      </div>
+
+      <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
+        <div id="hitl-audit-log-container">
+          <!-- Logs loaded dynamically -->
+          <div class="audit-loading">Loading immutable audit logs...</div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="refreshAuditLogs()">🔄 Refresh Logs</button>
+        <button class="btn-modal-ok" onclick="closeHitlAuditModal()">Close Audit Trail</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet.js Library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Custom GI Viewer Logic -->
+  <script src="gi-viewer.js?v=7"></script>
+
+  <!-- Custom Due Diligence Modal -->
+  <div id="custom-alert-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Verification Check</h3>
+        <button class="btn-close-modal" onclick="closeCustomModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <pre id="modal-message">Verification details...</pre>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-modal-ok" onclick="closeCustomModal()">OK, Got it</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
