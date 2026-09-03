@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TNGIS & Tamil Nilam GI Viewer</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Custom GI Viewer Stylesheet -->
+  <link rel="stylesheet" href="viewer-style.css?v=6">
+</head>
+<body class="gi-viewer-body">
+
+  <div class="gi-app-layout">
+    
+    <!-- Left Sidebar: Filter Panel -->
+    <aside class="gi-sidebar gi-filter-sidebar" id="filter-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="logo-icon">🗺️</span>
+          <div>
+            <h3>Tamil Nadu GIS</h3>
+            <span class="subtitle">Cadastral GI Explorer</span>
+          </div>
+        </div>
+        <button class="btn-icon toggle-sidebar" data-target="filter-sidebar">✕</button>
+      </div>
+
+      <div class="sidebar-content">
+        <!-- Search Filters Form -->
+        <form id="gis-search-form" class="gis-form">
+          <div class="form-group autocomplete-container">
+            <label for="district-select">District <span class="required">*</span></label>
+            <div class="autocomplete-wrapper">
+              <input type="text" id="district-select" placeholder="Type or select District..." autocomplete="off" required />
+              <div class="autocomplete-dropdown" id="district-dropdown"></div>
+            </div>
+          </div>
+
+          <div class="form-group autocomplete-container">
+            <label for="taluk-select">Taluk <span class="required">*</span></label>
+            <div class="autocomplete-wrapper">
+              <input type="text" id="taluk-select" placeholder="Type or select Taluk..." autocomplete="off" disabled required />
+              <div class="autocomplete-dropdown" id="taluk-dropdown"></div>
+            </div>
+          </div>
+
+          <div class="form-group autocomplete-container">
+            <label for="village-select">Village <span class="required">*</span></label>
+            <div class="autocomplete-wrapper">
+              <input type="text" id="village-select" placeholder="Type or select Village..." autocomplete="off" disabled required />
+              <div class="autocomplete-dropdown" id="village-dropdown"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-6 autocomplete-container">
+              <label for="survey-select">Survey No <span class="required">*</span></label>
+              <div class="autocomplete-wrapper">
+                <input type="text" id="survey-select" placeholder="Select..." autocomplete="off" disabled required />
+                <div class="autocomplete-dropdown" id="survey-dropdown"></div>
+              </div>
+            </div>
+            <div class="form-group col-6 autocomplete-container">
+              <label for="subdiv-select">Sub-division</label>
+              <div class="autocomplete-wrapper">
+                <input type="text" id="subdiv-select" placeholder="All" autocomplete="off" disabled />
+                <div class="autocomplete-dropdown" id="subdiv-dropdown"></div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-search" id="btn-search-land">
+            <span class="search-icon">🔍</span> Search Land Records
+          </button>
+          
+          <button type="button" class="btn-secondary" id="btn-reset-filters">
+            Reset Filters
+          </button>
+        </form>
+
+        <!-- Stats Overview Widget -->
+        <div class="gis-widget">
+          <h4>Land Use Metrics (TN-Gov)</h4>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <span class="value">94.8%</span>
+              <span class="label">Mapped Patta</span>
+            </div>
+            <div class="metric-card">
+              <span class="value">3.1M+</span>
+              <span class="label">Total Parcels</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="disclaimer-text">
+          <p>⚠️ <strong>Reference Only:</strong> Boundaries and sketches rendered are derived from digital cadastral registries. For official verification, refer to revenue-stamped Patta/Chitta.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Center: Interactive Map Container -->
+    <main class="gi-map-viewport">
+      
+      <!-- Top Action Floating HUD -->
+      <header class="map-hud-header">
+        <div class="hud-left">
+          <button class="btn-hud toggle-sidebar-trigger" id="trigger-filter">
+            ☰ Filter Land
+          </button>
+          <div class="hud-search-status" id="search-status-bar">
+            <span class="status-indicator idle"></span>
+            <span class="status-text">Zoom in to view cadastral parcel boundaries</span>
+          </div>
+        </div>
+        
+        <div class="hud-right">
+          <div class="map-layer-selector">
+            <button class="btn-hud active" id="layer-streets">Streets</button>
+            <button class="btn-hud" id="layer-satellite">Satellite</button>
+            <button class="btn-hud" id="layer-dark">Dark</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Leaflet Map Element -->
+      <div id="map" class="map-frame"></div>
+
+      <!-- Measurement HUD Overlay -->
+      <div class="measurement-hud" id="measurement-hud" style="display: none;">
+        <div class="hud-title">
+          <span>📏 Map Measurement Tool</span>
+          <button class="btn-close-hud" id="btn-close-measurer">✕</button>
+        </div>
+        <div class="hud-body">
+          <div class="measure-row">
+            <span class="lbl">Segment Distance:</span>
+            <span class="val" id="measure-segment">0.00 m</span>
+          </div>
+          <div class="measure-row">
+            <span class="lbl">Total Distance:</span>
+            <span class="val" id="measure-total-dist">0.00 m</span>
+          </div>
+          <div class="measure-row">
+            <span class="lbl">Enclosed Area:</span>
+            <span class="val" id="measure-area">0.00 m²</span>
+          </div>
+          <p class="hud-hint">Click on map to add points, double-click to finish measuring.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Map Controls & Coordinates -->
+      <footer class="map-hud-footer">
+        <div class="coordinates-hud">
+          <span class="coord-label">GPS Coordinate:</span>
+          <span class="coord-val" id="coords-display">13.0330° N, 80.2690° E</span>
+        </div>
+        <div class="quick-tools">
+          <button class="btn-quick-tool" id="btn-tool-measure" title="Measure Distance & Area">📏 Measure</button>
+          <button class="btn-quick-tool" id="btn-tool-clear" title="Clear Shapes & Paths">🧹 Clear Map</button>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Right Sidebar: Records & FMB Sketch Panel -->
+    <aside class="gi-sidebar gi-records-sidebar" id="records-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="logo-icon">📜</span>
+          <div>
+            <h3>Land Records Extract</h3>
+            <span class="subtitle" id="record-summary-title">No land parcel selected</span>
+          </div>
+        </div>
+        <button class="btn-icon toggle-sidebar" data-target="records-sidebar">✕</button>
+      </div>
+
+      <div class="sidebar-content">
+        
+        <!-- Toggle Tabs: A-Register / FMB Sketch -->
+        <div class="sidebar-tabs">
+          <button class="tab-btn active" data-tab="tab-aregister">A-Register</button>
+          <button class="tab-btn" data-tab="tab-fmb">FMB Sketch</button>
+        </div>
+
+        <!-- A-Register Tab Content -->
+        <div class="tab-pane active" id="tab-aregister">
+          <div class="details-placeholder" id="aregister-placeholder">
+            <div class="placeholder-icon">🔍</div>
+            <h4>Select a Survey Number</h4>
+            <p>Select a survey number from the filter panel or click directly on a highlighted parcel polygon on the map to load its official A-Register details.</p>
+          </div>
+          
+          <div class="details-content" id="aregister-content" style="display: none;">
+            <div class="patta-summary-card">
+              <div class="patta-badge">Patta / Chitta Verified</div>
+              <h3 id="patta-owner-name">K. Ramachandran</h3>
+              <div class="patta-row">
+                <span class="label">Patta No:</span>
+                <span class="value font-mono" id="patta-no">1042</span>
+              </div>
+              <div class="patta-row">
+                <span class="label">Land Category:</span>
+                <span class="value" id="land-category">Private (Ryotwari)</span>
+              </div>
+              <div class="patta-row">
+                <span class="label">Land Type:</span>
+                <span class="value highlight-val" id="land-type">Ryotwari Nanjai (Wet Land)</span>
+              </div>
+            </div>
+
+            <div class="extract-section">
+              <h4>A-Register Details</h4>
+              <table class="extract-table">
+                <tbody>
+                  <tr>
+                    <th>District</th>
+                    <td id="table-district">Chennai</td>
+                  </tr>
+                  <tr>
+                    <th>Taluk</th>
+                    <td id="table-taluk">Alandur</td>
+                  </tr>
+                  <tr>
+                    <th>Village</th>
+                    <td id="table-village">Alandur Village</td>
+                  </tr>
+                  <tr>
+                    <th>Survey / Subdivision</th>
+                    <td id="table-survey" class="font-mono">104 / 2B</td>
+                  </tr>
+                  <tr>
+                    <th>Total Extent</th>
+                    <td id="table-extent">0 Hectares, 25.5 Ares (0.63 Acres)</td>
+                  </tr>
+                  <tr>
+                    <th>Assessment (Tax)</th>
+                    <td id="table-assessment">₹ 3.50 / year</td>
+                  </tr>
+                  <tr>
+                    <th>Soil / Class</th>
+                    <td id="table-soil">Clayey / Class I (Vandol)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Adjacencies Map -->
+            <div class="adjacency-widget">
+              <h4>Registered Boundings</h4>
+              <div class="boundary-grid">
+                <div class="bound-card north">
+                  <span class="dir">N</span>
+                  <span class="val" id="boundary-n">Survey 104/1</span>
+                </div>
+                <div class="boundary-row-middle">
+                  <div class="bound-card west">
+                    <span class="dir">W</span>
+                    <span class="val" id="boundary-w">Road - Width 9m</span>
+                  </div>
+                  <div class="bound-center">📍</div>
+                  <div class="bound-card east">
+                    <span class="dir">E</span>
+                    <span class="val" id="boundary-e">Survey 104/3</span>
+                  </div>
+                </div>
+                <div class="bound-card south">
+                  <span class="dir">S</span>
+                  <span class="val" id="boundary-s">Survey 105</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FMB Sketch Tab Content -->
+        <div class="tab-pane" id="tab-fmb">
+          <div class="details-placeholder" id="fmb-placeholder">
+            <div class="placeholder-icon">📐</div>
+            <h4>Select a Survey Number</h4>
+            <p>Load land records to render the subdivision layout boundaries from the Field Measurement Book (FMB).</p>
+          </div>
+
+          <div class="details-content" id="fmb-content" style="display: none;">
+            <div class="fmb-sketch-box">
+              <!-- SVG Sketch gets drawn here dynamically -->
+              <svg id="fmb-svg" viewBox="-20 -20 240 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fallback/Default line structures, will be modified by JS -->
+              </svg>
+            </div>
+            
+            <div class="fmb-details">
+              <div class="fmb-legend">
+                <span class="legend-item"><span class="legend-color boundary"></span> Survey Boundary</span>
+                <span class="legend-item"><span class="legend-color subdiv"></span> Subdivision Line</span>
+                <span class="legend-item"><span class="legend-color text"></span> Side Dimensions (meters)</span>
+              </div>
+              
+              <div class="fmb-actions">
+                <button class="btn-action" id="btn-export-fmb">📥 Export Sketch (SVG)</button>
+                <button class="btn-action" id="btn-print-fmb">🖨️ Print FMB Sketch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Leaflet.js Library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Custom GI Viewer Logic -->
+  <script src="gi-viewer.js?v=18"></script>
+  <!-- Custom Due Diligence Modal -->
+  <div id="custom-alert-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title">Verification Check</h3>
+        <button class="btn-close-modal" onclick="closeCustomModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <pre id="modal-message">Verification details...</pre>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-modal-ok" onclick="closeCustomModal()">OK, Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OTP Modal: Step 1 - Enter Mobile Number ──────────────────────────── -->
+  <div id="otp-mobile-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card" style="max-width: 420px;">
+      <div class="modal-header">
+        <h3>🏛️ Fetch Live Patta from Govt. Portal</h3>
+        <button class="btn-close-modal" onclick="document.getElementById('otp-mobile-modal').style.display='none'">✕</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <div style="background: rgba(229,169,60,0.08); border: 1px solid rgba(229,169,60,0.3); border-radius: 8px; padding: 12px; margin-bottom: 16px; text-align: left;">
+          <p style="margin: 0; font-size: 12px; color: var(--color-text-body); line-height: 1.6;">
+            This will open a live session on <strong>eservices.tn.gov.in</strong> and send a one-time password (OTP) to your registered mobile number to fetch the official Patta document.
+          </p>
+        </div>
+        <div class="form-group" style="max-width: 300px; margin: 0 auto 10px auto; text-align: left;">
+          <label for="otp-mobile-input" style="font-size: 11px; text-transform: uppercase; color: var(--color-text-muted);">Mobile Number (10 digits)</label>
+          <input type="tel" id="otp-mobile-input" placeholder="e.g. 9876543210" maxlength="10" autocomplete="off"
+            style="text-align: center; font-size: 20px; letter-spacing: 3px; font-weight: bold;" />
+        </div>
+        <p id="otp-step1-status" style="font-size: 12px; color: #e5a93c; min-height: 18px; margin: 6px 0 0 0;"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-modal-ok" id="btn-send-otp" style="width: 100%;">📱 Send OTP to Mobile</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OTP Modal: Step 2 - Enter OTP ─────────────────────────────────── -->
+  <div id="otp-verify-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card" style="max-width: 400px;">
+      <div class="modal-header">
+        <h3>🔑 Enter OTP to Fetch Patta</h3>
+        <button class="btn-close-modal" onclick="document.getElementById('otp-verify-modal').style.display='none'">✕</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <div style="background: rgba(255,255,255,0.04); border-radius: 8px; padding: 10px; margin-bottom: 14px;">
+          <img id="otp-portal-screenshot" src="" alt="" style="max-width: 100%; border-radius: 4px; display: none;" />
+        </div>
+        <p style="font-size: 13px; color: var(--color-text-body); margin-bottom: 12px;">
+          OTP has been sent to your mobile. Enter it below:
+        </p>
+        <div class="form-group" style="max-width: 220px; margin: 0 auto 10px auto;">
+          <input type="text" id="otp-code-input" placeholder="6-digit OTP" maxlength="6" autocomplete="off"
+            style="text-align: center; font-size: 26px; letter-spacing: 6px; font-weight: bold;" />
+        </div>
+        <p id="otp-step2-status" style="font-size: 12px; color: #e5a93c; min-height: 18px;"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-modal-ok" id="btn-verify-otp" style="width: 100%;">✅ Verify OTP &amp; Fetch Patta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Patta Result Viewer Modal ──────────────────────────────────────── -->
+  <div id="patta-result-modal" class="custom-modal-overlay" style="display: none;">
+    <div class="custom-modal-card" style="max-width: 680px; max-height: 90vh;">
+      <div class="modal-header">
+        <h3>📄 Official Patta Document</h3>
+        <button class="btn-close-modal" onclick="document.getElementById('patta-result-modal').style.display='none'">✕</button>
+      </div>
+      <div class="modal-body" style="overflow-y: auto; max-height: calc(90vh - 130px); padding: 0;">
+        <img id="patta-result-img" src="" alt="Patta Document" style="width: 100%; display: block;" />
+      </div>
+      <div class="modal-footer" style="gap: 10px;">
+        <button class="btn-modal-ok" onclick="downloadPattaImage()" style="width: 48%;">⬇️ Download</button>
+        <button class="btn-modal-ok" onclick="window.print()" style="width: 48%; background: rgba(255,255,255,0.07);">🖨️ Print</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

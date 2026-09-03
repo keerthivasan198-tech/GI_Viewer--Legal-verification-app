@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "refresh_token",
+      "value": "64cbfba10ddbbd07c9fac5bf35f700f13a6948382bfaa38ad5d93d93f10f537e",
+      "domain": "tngis.tn.gov.in",
+      "path": "/",
+      "expires": 1788881794.60763,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://tngis.tn.gov.in",
+      "localStorage": [
+        {
+          "name": "fontSize",
+          "value": "100"
+        }
+      ]
+    }
+  ]
+}
